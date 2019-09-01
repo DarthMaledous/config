@@ -118,9 +118,9 @@ StylePtr<IgnitionDelay<300,InOutHelper<LocalizedClash<Lockup<Blast<AudioFlicker<
 
 BladeConfig blades[] = {
   { 0,  
-   		SubBlade(0, 2, WS2811BladePtr<122, WS2811_800kHz | WS2811_GRB>()),
+   	SubBlade(0, 2, WS2811BladePtr<122, WS2811_800kHz | WS2811_GRB>()),
         SubBlade(3,3, NULL),
-   		SubBlade(4, 121, NULL),
+   	SubBlade(4, 121, NULL),
         CONFIGARRAY(presets) },
 };
 
