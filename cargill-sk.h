@@ -44,57 +44,64 @@ const unsigned int maxLedsPerStrip = 144;
 
 Preset presets[] = {
 { "SK_DarkSith1", "tracks/SK1.wav",
-//MAIN BLADE
-StylePtr<IgnitionDelay<300, InOutHelper<LocalizedClash<Lockup<Blast<Red,White,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,3500>,AudioFlicker<OrangeRed,White>>,GreenYellow,60,75>,180,800,Black>>>(),
-
-//  CRYSTAL CHAMBER
-StylePtr<IgnitionDelay<250,InOutHelper<LocalizedClash<Lockup<Blast<Red,White,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,3500>,AudioFlicker<OrangeRed,White>>,GreenYellow,60,75>,180,800,Pulsing<Blinking<Black,Orange,1500,300>,Red,5800>>>>(),
-
 //ACCENT LEDs
-StylePtr<InOutHelper<SimpleClash<Lockup<Blast<ColorCycle<Orange,0,1,Blinking<Red,Blinking<GreenYellow,Magenta,3200,500>,2400,850>,100,3000,3500>,White,200,100,400>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>>,White,40>,300,800,Blinking<Green,Red,1500,300>>>(),"preset1" },
+StylePtr<InOutHelper<SimpleClash<Lockup<Blast<ColorCycle<Orange,0,1,Blinking<Red,Blinking<GreenYellow,Magenta,3200,500>,2400,850>,100,3000,3500>,White,200,100,400>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>>,White,40>,300,800,Blinking<Green,Red,1500,300>>>(),
 
-{ "Dark", "tracks/MSV.wav",
-//MAIN BLADE
-StylePtr<IgnitionDelay<300, InOutHelper<SimpleClash<Lockup<OriginalBlast<AudioFlicker<HumpFlicker<Rgb16<24816,0,0>,Red,15>,AudioFlicker<Rgb16<24816,0,0>,Yellow>>,Green>,Gradient<Pulsing<BrownNoiseFlicker<OrangeRed,Rgb16<24816,0,0>,50>,HumpFlicker<Yellow,OrangeRed,200>,2500>,Pulsing<HumpFlicker<Yellow,Magenta,50>,BrownNoiseFlicker<Red,Magenta,50>,2000>,Pulsing<AudioFlicker<White,Blue>,Red,2200>,BrownNoiseFlicker<OrangeRed,Yellow,200>>,AudioFlicker<AudioFlicker<Yellow,White>,White>>,Blue,40>,180,600,Black>>>(),
 
 //CRYSTAL CHAMBER
-StylePtr<IgnitionDelay<250, InOutHelper<SimpleClash<Lockup<OriginalBlast<AudioFlicker<HumpFlicker<Rgb16<24816,0,0>,Red,15>,AudioFlicker<Rgb16<24816,0,0>,Yellow>>,Green>,Gradient<Pulsing<BrownNoiseFlicker<OrangeRed,Rgb16<24816,0,0>,50>,HumpFlicker<Yellow,OrangeRed,200>,2500>,Pulsing<HumpFlicker<Yellow,Magenta,50>,BrownNoiseFlicker<Red,Magenta,50>,2000>,Pulsing<AudioFlicker<White,Blue>,Red,2200>,BrownNoiseFlicker<OrangeRed,Yellow,200>>,AudioFlicker<AudioFlicker<Yellow,White>,White>>,Blue,40>,180,600,Pulsing<Blinking<Red,Orange,1000,200>,Black,2800>>>>(),
+StylePtr<IgnitionDelay<250,InOutHelper<LocalizedClash<Lockup<Blast<Red,White,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,3500>,AudioFlicker<OrangeRed,White>>,GreenYellow,60,75>,180,800,Pulsing<Blinking<Black,Orange,1500,300>,Red,5800>>>>(),
 
+//MAIN BLADE
+StylePtr<IgnitionDelay<300,InOutHelper<LocalizedClash<Lockup<Blast<Red,White,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,3500>,AudioFlicker<OrangeRed,White>>,GreenYellow,60,75>,180,800,Black>>>(),"preset1"},
+
+
+
+
+{ "Dark", "tracks/MSV.wav",
 //ACCENT LEDs
-StylePtr<InOutHelper<SimpleClash<Lockup<Blast<ColorCycle<Orange,0,1,Blinking<Red,Blinking<GreenYellow,Magenta,3200,500>,2400,850>,100,3000,3500>,White,200,100,400>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>>,White,40>,300,800,Blinking<Green,Red,1500,300>>>(),"preset2" },
+StylePtr<InOutHelper<SimpleClash<Lockup<Blast<ColorCycle<Orange,0,1,Blinking<Red,Blinking<GreenYellow,Magenta,3200,500>,2400,850>,100,3000,3500>,White,200,100,400>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>>,White,40>,300,800,Blinking<Green,Red,1500,300>>>(),
+
+//CRYSTAL CHAMBER
+StylePtr<IgnitionDelay<250,InOutHelper<SimpleClash<Lockup<OriginalBlast<AudioFlicker<HumpFlicker<Rgb16<24816,0,0>,Red,15>,AudioFlicker<Rgb16<24816,0,0>,Yellow>>,Green>,Gradient<Pulsing<BrownNoiseFlicker<OrangeRed,Rgb16<24816,0,0>,50>,HumpFlicker<Yellow,OrangeRed,200>,2500>,Pulsing<HumpFlicker<Yellow,Magenta,50>,BrownNoiseFlicker<Red,Magenta,50>,2000>,Pulsing<AudioFlicker<White,Blue>,Red,2200>,BrownNoiseFlicker<OrangeRed,Yellow,200>>,AudioFlicker<AudioFlicker<Yellow,White>,White>>,Blue,40>,180,600,Pulsing<Blinking<Red,Orange,1000,200>,Black,2800>>>>(),
+
+
+//MAIN BLADE
+StylePtr<IgnitionDelay<300,InOutHelper<SimpleClash<Lockup<OriginalBlast<AudioFlicker<HumpFlicker<Rgb16<24816,0,0>,Red,15>,AudioFlicker<Rgb16<24816,0,0>,Yellow>>,Green>,Gradient<Pulsing<BrownNoiseFlicker<OrangeRed,Rgb16<24816,0,0>,50>,HumpFlicker<Yellow,OrangeRed,200>,2500>,Pulsing<HumpFlicker<Yellow,Magenta,50>,BrownNoiseFlicker<Red,Magenta,50>,2000>,Pulsing<AudioFlicker<White,Blue>,Red,2200>,BrownNoiseFlicker<OrangeRed,Yellow,200>>,AudioFlicker<AudioFlicker<Yellow,White>,White>>,Blue,40>,180,600,Black>>>(),"preset2"},
+
 
 
 { "Outcast_Knight", "tracks/SW_AST2.wav",
-//MAIN BLADE
-StylePtr<IgnitionDelay<300, InOutHelper<OnSpark<LocalizedClash<Lockup<Blast<AudioFlicker<Red,Rgb<120,0,0>>,DeepSkyBlue,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,3500>,AudioFlicker<Red,White>>,Rgb16<33908,20996,329>,80,80>,HumpFlicker<MistyRose,Red,60>,1600>,500,700,Black>>>(),
-
+//ACCENT LEDs
+StylePtr<InOutHelper<SimpleClash<Lockup<Blast<OnSpark<Blinking<Red,Rgb16<33908,20996,329>,700,300>,White,700>,White,200,100,400>,AudioFlicker<OnSpark<Green,White,200>,White>,AudioFlicker<OnSpark<Green,White,200>,White>>,White,40>,300,800,Blinking<Black,Red,1400,200>>>(),
+	
 //CRYSTAL CHAMBER
 StylePtr<IgnitionDelay<250, InOutHelper<SimpleClash<Lockup<Blast<Pulsing<StyleFire<Red,Orange,0,5,FireConfig<0,4000,5>,FireConfig<3000,0,0>,FireConfig<0,5000,10>,FireConfig<0,0,5>>,AudioFlicker<Black,Red>,2500>,White,200,100,400>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,1500>,Red>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>>,White,40>,300,800,Black>>>(),
 
- //ACCENT LEDs
-StylePtr<InOutHelper<SimpleClash<Lockup<Blast<OnSpark<Blinking<Red,Rgb16<33908,20996,329>,700,300>,White,700>,White,200,100,400>,AudioFlicker<OnSpark<Green,White,200>,White>,AudioFlicker<OnSpark<Green,White,200>,White>>,White,40>,300,800,Blinking<Black,Red,1400,200>>>(), "preset3"},
+
+//MAIN BLADE
+StylePtr<IgnitionDelay<300,InOutHelper<OnSpark<LocalizedClash<Lockup<Blast<AudioFlicker<Red,Rgb<120,0,0>>,DeepSkyBlue,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,3500>,AudioFlicker<Red,White>>,Rgb16<33908,20996,329>,80,80>,HumpFlicker<MistyRose,Red,60>,1600>,500,700,Black>>>(),"preset3"},
 
 
 {"SK_DarkSith2", "tracks/SW_DarkDeeds.wav",
-//MAIN BLADE
-StylePtr<IgnitionDelay<300, InOutHelper<Lockup<LocalizedClash<Blast<AudioFlicker<Red,Rgb<120,0,0>>,White,200,175,250>,White,40,50>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,300,500,Black>>>(),
+//ACCENT LEDs
+StylePtr<InOutHelper<SimpleClash<Lockup<Blast<OnSpark<Blinking<Red,Rgb16<33908,20996,329>,700,300>,White,700>,White,200,100,400>,AudioFlicker<OnSpark<Green,White,200>,White>,AudioFlicker<OnSpark<Green,White,200>,White>>,White,40>,300,800,Blinking<Black,Red,1400,200>>>(),
 
 //CRYSTAL CHAMBER
 StylePtr<IgnitionDelay<250, InOutHelper<Lockup<LocalizedClash<Blast<AudioFlicker<Red,Rgb<120,0,0>>,White,200,175,250>,White,40,50>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,300,500,Black>>>(),
 
-//ACCENT LEDs
-StylePtr<InOutHelper<SimpleClash<Lockup<Blast<OnSpark<Blinking<Red,Rgb16<33908,20996,329>,700,300>,White,700>,White,200,100,400>,AudioFlicker<OnSpark<Green,White,200>,White>,AudioFlicker<OnSpark<Green,White,200>,White>>,White,40>,300,800,Blinking<Black,Red,1400,200>>>(), "preset4"},
+//MAIN BLADE
+StylePtr<IgnitionDelay<300,InOutHelper<Lockup<LocalizedClash<Blast<AudioFlicker<Red,Rgb<120,0,0>>,White,200,175,250>,White,40,50>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,Strobe<White,RandomPerLEDFlicker<White,Blue>,15,3>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,300,500,Black>>>(),"preset4"},
 
 
 {"Sith_02", "tracks/SK2.wav",
-//MAIN BLADE
-StylePtr<IgnitionDelay<300, InOutHelper<LocalizedClash<Lockup<Blast<AudioFlicker<Red,Rgb<130,0,0>>,Cyan,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,3500>,Pulsing<Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,3500>>,Cyan,40,50>,180,500,Black>>>(),
+//ACCENT LEDs
+StylePtr<InOutHelper<SimpleClash<Lockup<Blast<OnSpark<Blinking<Red,Rgb16<33908,20996,329>,700,300>,White,700>,White,200,100,400>,AudioFlicker<OnSpark<Green,White,200>,White>,AudioFlicker<OnSpark<Green,White,200>,White>>,White,40>,300,800,Blinking<Black,Red,1400,200>>>(),
 
 //CRYSTAL CHAMBER
 StylePtr<IgnitionDelay<250, InOutHelper<SimpleClash<Lockup<Blast<Pulsing<StyleFire<Red,Orange,0,5,FireConfig<0,4000,5>,FireConfig<3000,0,0>,FireConfig<0,5000,10>,FireConfig<0,0,5>>,AudioFlicker<Black,Red>,2500>,White,200,100,400>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,1500>,Red>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>>,White,40>,300,800,Black>>>(),
 
-//ACCENT LEDs
-StylePtr<InOutHelper<SimpleClash<Lockup<Blast<OnSpark<Blinking<Red,Rgb16<33908,20996,329>,700,300>,White,700>,White,200,100,400>,AudioFlicker<OnSpark<Green,White,200>,White>,AudioFlicker<OnSpark<Green,White,200>,White>>,White,40>,300,800,Blinking<Black,Red,1400,200>>>(), "preset5"},
+//MAIN BLADE
+StylePtr<IgnitionDelay<300,InOutHelper<LocalizedClash<Lockup<Blast<AudioFlicker<Red,Rgb<130,0,0>>,Cyan,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,3500>,Pulsing<Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,Gradient<AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>,BrownNoiseFlicker<White,Strobe<Blue,White,50,1>,100>,AudioFlicker<Red,Rgb<130,0,0>>,AudioFlicker<Red,Rgb<130,0,0>>>,3500>>,Cyan,40,50>,180,500,Black>>>(),"preset5"},
 
  };
 
@@ -110,11 +117,11 @@ StylePtr<InOutHelper<SimpleClash<Lockup<Blast<OnSpark<Blinking<Red,Rgb16<33908,2
 //  NEOPIXEL data  <--> Nepixel data 3 (through a 300ohm resistor)
 
 BladeConfig blades[] = {
-  { 0,  WS2811BladePtr<118, WS2811_ACTUALLY_800kHz | WS2811_GRB>(),
-        WS2811BladePtr<1, WS2811_ACTUALLY_800kHz | WS2811_GRB, blade2Pin, PowerPINS<bladePowerPin6> >(),
-        WS2811BladePtr<2, WS2811_ACTUALLY_800kHz | WS2811_GRB, blade3Pin, PowerPINS<bladePowerPin5> >(),
-    CONFIGARRAY(presets)
-  },
+  { 0,  
+   		SubBlade(0, 2, WS2811BladePtr<122, WS2811_800kHz | WS2811_GRB>()),
+        SubBlade(3,3, NULL),
+   		SubBlade(4, 121, NULL),
+        CONFIGARRAY(presets) },
 };
 
 #endif
