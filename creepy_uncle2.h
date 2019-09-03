@@ -32,6 +32,14 @@ StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<Gradient<Pulsin
 StylePtr<InOutHelper<Sequence<Green,Black,500,80,0b1010101010101010,0b1010000000000000,0b10101010,0b1010101010100000,0b0>,1,1,Blinking<Green,Black,2000,200>>>(),
 StylePtr<InOutHelper<Sequence<Red,Black,500,80,0b0,0b101010101010,0b1010101000000000,0b1010,0b1010101010101010>,1,1>>(), "CreepyUncle"},
  
+
+{"The_Return", "tracks/Final_Duel.wav",
+StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Pulsing<Gradient<HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Strobe<Orange,BrownNoiseFlicker<Red,White,100>,50,1>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Strobe<Orange,BrownNoiseFlicker<Red,White,100>,50,1>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>>,Pulsing<Gradient<HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Strobe<Orange,BrownNoiseFlicker<Red,White,100>,50,1>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Strobe<Orange,BrownNoiseFlicker<Red,White,100>,50,1>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Strobe<Orange,BrownNoiseFlicker<Red,White,100>,50,1>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>>,Gradient<HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Strobe<Orange,BrownNoiseFlicker<Red,White,100>,50,1>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>,Strobe<Orange,BrownNoiseFlicker<Red,White,100>,50,1>,HumpFlicker<Pulsing<Chartreuse,Green,2500>,Gradient<Green,Chartreuse>,80>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,80,75>,Magenta>,BrownNoiseFlicker<LightCyan,Chartreuse,150>,1500>,200,500>>(),
+
+StylePtr<InOutHelper<Sequence<Green,Black,500,80,0b1010101010101010,0b1010000000000000,0b10101010,0b1010101010100000,0b0>,1,1,Blinking<Green,Black,2000,200>>>(),
+StylePtr<InOutHelper<Sequence<Red,Black,500,80,0b0,0b101010101010,0b1010101000000000,0b1010,0b1010101010101010>,1,1>>(), "CreepyUncle"},
+
+
 { "Ksith_Vengeance_SS", "tracks/rotj2.wav",
 StylePtr<InOutHelper<SimpleClash<Lockup<OriginalBlast<Pulsing<Rgb<10,255,0>,GreenYellow,2500>,HumpFlicker<Orange,Magenta,50>>,AudioFlicker<HumpFlicker<LightYellow,LightCyan,50>,Red>,AudioFlicker<HumpFlicker<LightYellow,LightCyan,50>,Red>>,HoneyDew,40>,180,800,Black>>(),
  
@@ -56,7 +64,7 @@ StyleNormalPtr<BLACK, BLACK, 100,100>(),}
 BladeConfig blades[] = {
  { 0, WS2811BladePtr<118, WS2811_ACTUALLY_800kHz | WS2811_GRB>(), 
       SimpleBladePtr<CreeXPE2GreenTemplate<13000>, NoLED, NoLED, NoLED, bladePowerPin4, -1, -1, -1>(),
-	  SimpleBladePtr<CreeXPE2RedTemplate<100000>, NoLED, NoLED, NoLED, bladePowerPin5, -1, -1, -1>(),
+      SimpleBladePtr<CreeXPE2RedTemplate<100000>, NoLED, NoLED, NoLED, bladePowerPin5, -1, -1, -1>(),
 CONFIGARRAY(presets) },
 };
 #endif
