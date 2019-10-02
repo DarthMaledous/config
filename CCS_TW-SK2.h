@@ -4,7 +4,7 @@
 #define NUM_BUTTONS 2
 #define VOLUME 2500
 const unsigned int maxLedsPerStrip = 144;
-#define CLASH_THRESHOLD_G 2.0
+#define CLASH_THRESHOLD_G 2.5
 #define ENABLE_AUDIO
 #define ENABLE_MOTION
 #define ENABLE_WS2811
@@ -134,7 +134,7 @@ StylePtr<IgnitionDelay<300,InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Audio
 BladeConfig blades[] = {
   { 0, 
    
-	  SubBlade(0, 2, WS2811BladePtr<127, WS2811_800kHz | WS2811_GRB>()),
+	    SubBlade(0, 2, WS2811BladePtr<127, WS2811_800kHz | WS2811_GRB>()),
    	  SubBlade(3, 3, NULL),
    	  SubBlade(4, 8, NULL),
    	  SubBlade(9, 126, NULL),
