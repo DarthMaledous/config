@@ -9,6 +9,8 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_MOTION
 #define ENABLE_WS2811
 #define ENABLE_SD
+#define SAVED_PRESET
+#define NO_COLOR_SWING
 #endif
 
 #ifdef CONFIG_PRESETS
@@ -128,9 +130,9 @@ StylePtr<InOutHelper<OriginalBlast<SimpleClash<Lockup<HumpFlicker<BrownNoiseFlic
 BladeConfig blades[] = {
   { 0,  
    	SubBlade(0, 1, WS2811BladePtr<121, WS2811_ACTUALLY_800kHz | WS2811_GRB>()),
-    	SubBlade(2, 2, NULL),
+    SubBlade(2, 2, NULL),
    	SubBlade(3, 120, NULL),
-    	CONFIGARRAY(presets) },
+    CONFIGARRAY(presets) },
 };
 
 #endif
