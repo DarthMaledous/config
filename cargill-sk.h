@@ -103,7 +103,7 @@ StylePtr<InOutHelper<OnSpark<OffSpark<EndSpark<LocalizedClash<Blast<LocalizedLoc
 
 // NON COLOR CHANGE PRESETS //
 
-{ "RgueCmdr", "tracks/mercury.wav",
+{ "RgueCmdr", "tracks/Cantina.wav",
 //ACCENT LEDs
 StylePtr<InOutHelper<SimpleClash<Lockup<Blast<ColorCycle<Orange,0,1,Blinking<Red,Blinking<GreenYellow,Magenta,3200,500>,2400,850>,100,3000,3500>,White,200,100,400>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>,AudioFlicker<Pulsing<Red,Rgb<50,0,0>,5000>,Red>>,White,40>,300,800,Blinking<Green,Red,1500,300>>>(),
 
