@@ -87,7 +87,7 @@ StylePtr<InOutHelper<SimpleClash<Lockup<Blast<Gradient<Green,GreenYellow,Yellow>
     &style_charging, "Battery\nLevel"}
 };
 BladeConfig blades[] = {
- { 0, WS2811BladePtr<118, WS2811_ACTUALLY_800kHz | WS2811_GRB>(), CONFIGARRAY(presets) },
+ { 0, WS2811BladePtr<121, WS2811_ACTUALLY_800kHz | WS2811_GRB>(), CONFIGARRAY(presets) },
 };
 #endif
 
