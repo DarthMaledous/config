@@ -4,7 +4,7 @@
 #define NUM_BUTTONS 2
 #define VOLUME 2500
 const unsigned int maxLedsPerStrip = 144;
-#define CLASH_THRESHOLD_G 2.5
+#define CLASH_THRESHOLD_G 3.5
 #define ENABLE_AUDIO
 #define ENABLE_MOTION
 #define ENABLE_WS2811
@@ -25,20 +25,20 @@ StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Rgb16<65535,0,0>, Pulsi
 StylePtr<SimpleClash<Lockup<Blast<ColorCycle<Black,1,0,AudioFlicker<Red,Orange>,100,2000,3000>,White,200,100,400>,AudioFlicker<ColorCycle<Black,1,0,AudioFlicker<Red,Orange>,100,2000,3000>,White>,AudioFlicker<ColorCycle<Black,1,0,AudioFlicker<Red,Orange>,100,2000,3000>,White>>,BrownNoiseFlicker<Green,Red,50>,40>>(), "Vader2"},
 
 // Vader PulseFlicker
-{ "Vengeance_KS_SS", "tracks/vader-march.wav",
-StylePtr<InOutHelper<SimpleClash<Lockup<Blast<Pulsing<HumpFlicker<Green,DarkOrange,50>,HumpFlicker<Yellow,Red,50>,2500>,Magenta,200,100,400>,AudioFlicker<Blue,White>,AudioFlicker<Blue,White>>,LocalizedClash<SpringGreen,White,40,25>,40>,200,800,Black>>(), "Vader3"},
+{ "Father", "tracks/darth_sidious.wav",
+StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Red,2500>,Pulsing<Gradient<Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Strobe<Green,BrownNoiseFlicker<Green,Red,100>,50,1>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>>,Gradient<Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Strobe<Green,BrownNoiseFlicker<Green,Red,100>,50,1>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>>,3500>,RandomPerLEDFlicker<Red,White>>,GreenYellow,80>,White>,MistyRose,1200>,200,500>>(), "Vader3"},
 
 //Vader / Red Sith with LocalizedClash
-{ "noss/DVR1", "tracks/kylo1.wav",
-StylePtr<InOutHelper<LocalizedClash<Lockup<Blast<Red,White,200,100,400>,AudioFlicker<Red,GreenYellow>,AudioFlicker<OrangeRed,White>>,GreenYellow,60,75>,200,800,Black>>(), "Vader4"},
+{ "Black_Bishop", "tracks/Vaders_Revenge.wav",
+StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<Red,Rgb16<34702,0,0>>,Pulsing<Gradient<AudioFlicker<Red,Rgb16<34702,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb16<34702,0,0>>,AudioFlicker<Red,Rgb16<34702,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb16<34702,0,0>>,AudioFlicker<Red,Rgb16<34702,0,0>>>,Pulsing<Gradient<AudioFlicker<Red,Rgb16<34702,0,0>>,AudioFlicker<Red,Rgb16<34702,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb16<34702,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb16<34702,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb16<34702,0,0>>>,Gradient<AudioFlicker<Red,Rgb16<34702,0,0>>,AudioFlicker<Red,Rgb16<34702,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb16<34702,0,0>>,AudioFlicker<Red,Rgb16<34702,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb16<34702,0,0>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,Green,80>,White>,RandomFlicker<Red,Black>,1200>,200,500>>(), "Vader4"},
 
 //Vader / Yellow_RedOrange with LocalizedClash and HumpFlicker
 { "RogueVader_SS_KS", "tracks/vader-r1.wav",
-StylePtr<InOutHelper<LocalizedClash<Lockup<Blast<HumpFlicker<Red,Yellow,100>,Rgb16<21301,1899,65535>,200,100,400>,HumpFlicker<Green,Yellow,50>,AudioFlicker<OrangeRed,White>>,GreenYellow,60,75>,200,800,Black>>(), "Vader5"},
+StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,RandomFlicker<Red,LightPink>,2500>,Pulsing<Gradient<Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Strobe<Green,BrownNoiseFlicker<Green,Red,100>,50,1>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>>,Gradient<Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Strobe<Green,BrownNoiseFlicker<Green,Red,100>,50,1>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>,Pulsing<RandomFlicker<Rgb16<34702,0,0>,Red>,Rgb16<34702,0,0>,2500>>,3500>,RandomPerLEDFlicker<Red,White>>,GreenYellow,80>,GreenYellow>,MistyRose,1200>,200,500>>(), "Vader5"},
 
 // Vader / Sith Red_Green HumpFlicker
 { "Vengeance_KS_SS", "tracks/ro-vader.wav",
-StylePtr<InOutHelper<LocalizedClash<Lockup<Blast<HumpFlicker<Red,Green,150>,Rgb16<21301,1899,65535>,200,100,400>,HumpFlicker<Green,Yellow,50>,AudioFlicker<OrangeRed,White>>,Green,60,75>,200,800,Black>>(), "Vader6"},
+StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<Red,Rgb16<35507,0,11>>,Pulsing<Gradient<AudioFlicker<Red,Rgb16<35507,0,11>>,AudioFlicker<Red,Rgb16<35507,0,11>>,Strobe<Green,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Red,Rgb16<35507,0,11>>,AudioFlicker<Red,Rgb16<35507,0,11>>>,Gradient<AudioFlicker<Red,Rgb16<35507,0,11>>,AudioFlicker<Red,Rgb16<35507,0,11>>,Strobe<Green,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Red,Rgb16<35507,0,11>>,AudioFlicker<Red,Rgb16<35507,0,11>>,AudioFlicker<Red,Rgb16<35507,0,11>>>,3500>,RandomPerLEDFlicker<Red,White>>,GreenYellow,80>,Green>,GhostWhite,1000>,200,500>>(), "Vader6"},
 
   
 // End of SmoothSwing Font Section //
