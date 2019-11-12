@@ -9,6 +9,8 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_MOTION
 #define ENABLE_WS2811
 #define ENABLE_SD
+#define SAVED_PRESET
+#define NO_COLOR_SWING
 #endif
 
 #ifdef CONFIG_PRESETS
@@ -120,9 +122,9 @@ StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Pulsing<BrownNoiseFlick
 
 //CRYSTAL CHAMBER
 {"Fallen_Order", "tracks/fallen_order.wav",
-StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<AudioFlicker<Yellow,Red>,AudioFlicker<OrangeRed,Black>,50>,50>,White>,Pulsing<BrownNoiseFlicker<Tomato,BrownNoiseFlicker<Black,Yellow,50>,50>,BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<Black,Magenta,50>,50>,1000>,AudioFlicker<Blue,White>>,White>,300,800>>(),
+StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<AudioFlicker<Yellow,Red>,AudioFlicker<OrangeRed,Black>,50>,50>,White>,Pulsing<BrownNoiseFlicker<Tomato,BrownNoiseFlicker<Black,Yellow,50>,50>,BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<Black,Magenta,50>,50>,1000>,AudioFlicker<Blue,White>>,White>,300,800,Pulsing<Red,Yellow,3500>>>(),
 
- StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<AudioFlicker<Yellow,Red>,AudioFlicker<OrangeRed,Black>,50>,50>,White>,Pulsing<BrownNoiseFlicker<Tomato,BrownNoiseFlicker<Black,Yellow,50>,50>,BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<Black,Magenta,50>,50>,1000>,AudioFlicker<Blue,White>>,White>,300,800>>(),
+ StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<AudioFlicker<Yellow,Red>,AudioFlicker<OrangeRed,Black>,50>,50>,White>,Pulsing<BrownNoiseFlicker<Tomato,BrownNoiseFlicker<Black,Yellow,50>,50>,BrownNoiseFlicker<OrangeRed,BrownNoiseFlicker<Black,Magenta,50>,50>,1000>,AudioFlicker<Blue,White>>,White>,300,800,Pulsing<Yellow,Red,3500>>>(),
  
 //5 NPXL LED
 StylePtr<InOutHelper<EasyBlade<OnSpark<ColorSequence<900,Pulsing<BrownNoiseFlicker<Yellow,Orange,50>,BrownNoiseFlicker<Tomato,Red,50>,800>,HumpFlicker<BrownNoiseFlicker<Tomato,Red,50>,RandomPerLEDFlicker<Green,Yellow>,50>,RandomPerLEDFlicker<Green,DarkOrange>>,AudioFlicker<Orange,LightYellow>,400>,White>,300,800,Pulsing<Cylon<Orange,5,20,Red,5,20,1>,Cylon<Rgb16<35103,12029,46888>,5,20,Rgb16<35103,12029,46888>,5,20,1>,4500>>>(),
@@ -134,11 +136,11 @@ StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Gradient<BrownNoiseFlic
 };
 BladeConfig blades[] = {
 	{ 0,
-		SubBlade(0, 0, WS2811BladePtr<128, WS2811_ACTUALLY_800kHz | WS2811_GRB>()),
-		SubBlade(1, 1, NULL),
-	 	SubBlade(2, 6, NULL),
-	 	SubBlade(7, 128, NULL),
-		CONFIGARRAY(presets) },
+	   SubBlade(0, 0, WS2811BladePtr<128, WS2811_ACTUALLY_800kHz | WS2811_GRB>()),
+	   SubBlade(1, 1, NULL),
+	   SubBlade(2, 6, NULL),
+	   SubBlade(7, 127, NULL),
+	   CONFIGARRAY(presets) },
 };
 #endif
 
