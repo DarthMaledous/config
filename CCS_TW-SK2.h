@@ -9,6 +9,8 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_MOTION
 #define ENABLE_WS2811
 #define ENABLE_SD
+#define NO_COLOR_SWING
+#define SAVED_PRESET
 #endif
 
 #ifdef CONFIG_PRESETS
@@ -56,7 +58,7 @@ StylePtr<IgnitionDelay<300,InOutHelper<LocalizedClash<Lockup<Blast<Red,White,200
 ///////
 	
 	
-{ "Dark", "tracks/MSV.wav",
+{ "Violence", "tracks/MSV.wav",
 
 //ACCENT LEDs
 StylePtr<InOutHelper<Blast<LocalizedClash<Lockup<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,80>,White>,200,500,Cylon<Pulsing<Rgb16<14634,0,0>,Red,800>,5,10,Pulsing<Red,Rgb16<14634,0,0>,800>,5,20,1>>>(),
@@ -70,7 +72,7 @@ StylePtr<IgnitionDelay<300,InOutHelper<SimpleClash<Lockup<OriginalBlast<AudioFli
 //////
 
 
-{ "Control", "tracks/SW_AST2.wav",
+{ "Energy_Saber", "tracks/SKT2.wav",
  //ACCENT LEDs
 StylePtr<InOutHelper<Blast<LocalizedClash<Lockup<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,80>,White>,200,500,Cylon<Pulsing<Rgb16<14634,0,0>,Red,800>,5,10,Pulsing<Red,Rgb16<14634,0,0>,800>,5,20,1>>>(),
 	
@@ -134,10 +136,9 @@ StylePtr<IgnitionDelay<300,InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Audio
 BladeConfig blades[] = {
   { 0, 
    
-	    SubBlade(0, 2, WS2811BladePtr<127, WS2811_800kHz | WS2811_GRB>()),
+	  SubBlade(0, 2, WS2811BladePtr<122, WS2811_800kHz | WS2811_GRB>()),
    	  SubBlade(3, 3, NULL),
-   	  SubBlade(4, 8, NULL),
-   	  SubBlade(9, 126, NULL),
+   	  SubBlade(4, 121, NULL),
       CONFIGARRAY(presets)
   },
 };
