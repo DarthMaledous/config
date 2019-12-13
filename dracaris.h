@@ -2,7 +2,7 @@
 #include "proffieboard_v1_config.h"
 #define NUM_BLADES 1
 #define NUM_BUTTONS 2
-#define VOLUME 2600
+#define VOLUME 2400
 const unsigned int maxLedsPerStrip = 144;
 #define CLASH_THRESHOLD_G 2.5
 #define ENABLE_AUDIO
@@ -20,8 +20,8 @@ StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<RandomFlicker<O
 
 
 
-{"proto2", "",
-StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<RandomFlicker<Yellow,GreenYellow>,Pulsing<Gradient<RandomFlicker<Yellow,GreenYellow>,RandomFlicker<Yellow,GreenYellow>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Yellow,GreenYellow>,RandomFlicker<Yellow,GreenYellow>>,Gradient<RandomFlicker<Yellow,GreenYellow>,RandomFlicker<Yellow,GreenYellow>,RandomFlicker<Yellow,GreenYellow>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Yellow,GreenYellow>,RandomFlicker<Yellow,GreenYellow>>,3500>,RandomPerLEDFlicker<Red,White>>,GhostWhite,120>,BrownNoiseFlicker<Cyan,DodgerBlue,50>>,White,400>,200,500>>(), "Prototype2"},
+{"The_Second", "",
+StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<RandomFlicker<Rgb<255,160,0>,Orange>,Pulsing<Gradient<RandomFlicker<Rgb<255,160,0>,Orange>,RandomFlicker<Rgb<255,160,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<255,160,0>,Orange>,RandomFlicker<Rgb<255,160,0>,Orange>>,Gradient<RandomFlicker<Rgb<255,160,0>,Orange>,RandomFlicker<Rgb<255,160,0>,Orange>,RandomFlicker<Rgb<255,160,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<255,160,0>,Orange>,RandomFlicker<Rgb<255,160,0>,Orange>>,3500>,RandomPerLEDFlicker<Red,White>>>,White>,GhostWhite,850>,200,500>>(), "Prototype2"},
 
 
 
@@ -36,7 +36,7 @@ StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<BrownNoiseFlick
 
 
 {"Korriban_SS", "",
-StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<BrownNoiseFlicker<Red,Tomato,75>,Pulsing<Gradient<BrownNoiseFlicker<Red,Tomato,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Tomato,75>,BrownNoiseFlicker<Red,Tomato,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Tomato,75>,BrownNoiseFlicker<Red,Tomato,75>>,Pulsing<Gradient<BrownNoiseFlicker<Red,Tomato,75>,BrownNoiseFlicker<Red,Tomato,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Tomato,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Tomato,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Tomato,75>>,Gradient<BrownNoiseFlicker<Red,Tomato,75>,BrownNoiseFlicker<Red,Tomato,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Tomato,75>,BrownNoiseFlicker<Red,Tomato,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Tomato,75>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,BrownNoiseFlicker<Magenta,Black,75>,120,80>,Orange>,White,800>,200,500>>(), "Korriban"},
+StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<AudioFlicker<Red,Rgb<175,0,0>>,Pulsing<Gradient<BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>>,Pulsing<Gradient<BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>>,Gradient<BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<Red,Rgb<175,0,0>,75>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,BrownNoiseFlicker<Magenta,Black,75>,120,80>,Orange>,White,800>,200,500>>(), "Korriban"},
 
 
 
@@ -44,13 +44,19 @@ StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<BrownNoiseFlick
 StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<RandomFlicker<Rgb<180,85,0>,Orange>,Pulsing<Gradient<RandomFlicker<Rgb<180,85,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<180,85,0>,Orange>,RandomFlicker<Rgb<180,85,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<180,85,0>,Orange>,RandomFlicker<Rgb<180,85,0>,Orange>>,Pulsing<Gradient<RandomFlicker<Rgb<180,85,0>,Orange>,RandomFlicker<Rgb<180,85,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<180,85,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<180,85,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<180,85,0>,Orange>>,Gradient<RandomFlicker<Rgb<180,85,0>,Orange>,RandomFlicker<Rgb<180,85,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<180,85,0>,Orange>,RandomFlicker<Rgb<180,85,0>,Orange>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Rgb<180,85,0>,Orange>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,160,80>,White>,Gradient<GhostWhite,Orange>,800>,200,500>>(), "Vengeance"},
 
 
+{"Nightsister","",
+StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<RandomFlicker<Red,Rgb<170,0,0>>,Pulsing<Gradient<RandomFlicker<Red,Rgb<170,0,0>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Red,Rgb<170,0,0>>,RandomFlicker<Red,Rgb<170,0,0>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Red,Rgb<170,0,0>>,RandomFlicker<Red,Rgb<170,0,0>>>,Pulsing<Gradient<RandomFlicker<Red,Rgb<170,0,0>>,RandomFlicker<Red,Rgb<170,0,0>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Red,Rgb<170,0,0>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Red,Rgb<170,0,0>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Red,Rgb<170,0,0>>>,Gradient<RandomFlicker<Red,Rgb<170,0,0>>,RandomFlicker<Red,Rgb<170,0,0>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Red,Rgb<170,0,0>>,RandomFlicker<Red,Rgb<170,0,0>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Red,Rgb<170,0,0>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,100,85>,Green>,Gradient<GhostWhite,AudioFlicker<Orange,Yellow>>,1000>,200,500>>(), "Nightsister"},
+
+
+{"SK_DarkSith2","",
+StylePtr<InOutHelper<OnSpark<OriginalBlast<LocalizedClash<Lockup<Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Pulsing<Gradient<Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>>,Pulsing<Gradient<Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>>,Gradient<Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<Pulsing<Gradient<GhostWhite,DarkOrange>,Gradient<DarkOrange,Moccasin>,6000>,RandomFlicker<Orange,Yellow>,RandomFlicker<Orange,Yellow>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,40,80>,White>,Gradient<GhostWhite,Yellow>,1000>,200,500>>(), "SK_DarkSith2"},
 
 
 { "SmthJedi", "tracks/mars.wav",
  &style_charging, "Battery\nLevel"}
 };
 BladeConfig blades[] = {
- { 0, WS2811BladePtr<144, WS2811_ACTUALLY_800kHz | WS2811_GRB>(), CONFIGARRAY(presets) },
+ { 0, WS2811BladePtr<118, WS2811_ACTUALLY_800kHz | WS2811_GRB>(), CONFIGARRAY(presets) },
 };
 #endif
 
