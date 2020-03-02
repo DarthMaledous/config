@@ -37,6 +37,18 @@ StylePtr<InOutHelper<OnSpark<Green,AudioFlicker<White,GreenYellow>,650>,200,500,
 StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<Green,Rgb<5,185,0>>, Pulsing<Gradient<AudioFlicker<Green,Rgb<5,185,0>>, Strobe<White, BrownNoiseFlicker<White,Red,150>,50,1>,AudioFlicker<Green,Rgb<5,185,0>>, AudioFlicker<Green,Rgb<5,185,0>>, Strobe<White, BrownNoiseFlicker<White,Red,150>,50,1>,AudioFlicker<Green,Rgb<5,185,0>>, AudioFlicker<Green,Rgb<5,185,0>>>, Pulsing<Gradient<AudioFlicker<Green,Rgb<5,185,0>>, AudioFlicker<Green,Rgb<5,185,0>>, Strobe<White, BrownNoiseFlicker<White,Red,150>,50,1>,AudioFlicker<Green,Rgb<5,185,0>>, Strobe<White, BrownNoiseFlicker<White,Red,150>,50,1>,AudioFlicker<Green,Rgb<5,185,0>>, Strobe<White, BrownNoiseFlicker<White,Red,150>,50,1>,AudioFlicker<Green,Rgb<5,185,0>>>,Gradient<AudioFlicker<Green,Rgb<5,185,0>>, AudioFlicker<Green,Rgb<5,185,0>>, Strobe<White, BrownNoiseFlicker<White,Red,150>,50,1>,AudioFlicker<Green,Rgb<5,185,0>>, AudioFlicker<Green,Rgb<5,185,0>>, Strobe<White, BrownNoiseFlicker<White,Red,150>,50,1>,AudioFlicker<Green,Rgb<5,185,0>>>,1500>,2000>, RandomPerLEDFlicker<Red,White>>, White, 90, 80>, GhostWhite, 600, 100, 400>, White, 400>, 200, 500, Black>>(), "BEspin_CFX_SS"},
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+{"Hero_CFX_SS", "tracks/TLJ_Spark.wav",
+//CRYSTAL CHAMBER
+StylePtr<InOutHelper<OnSpark<Green,AudioFlicker<White,GreenYellow>,650>,200,500,Pulsing<Black,Green,4200>>>(),
+
+// PCB LED's
+StylePtr<InOutHelper<OnSpark<Green,AudioFlicker<White,GreenYellow>,650>,200,500,Pulsing<Black,Green,4200>>>(),
+
+//MAIN BLADE
+StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Pulsing<Gradient<AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>>,Pulsing<Gradient<AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>>,Gradient<AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<Gradient<GreenYellow,Chartreuse>,Gradient<Chartreuse,Green>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,90,70>,ColorSequence<1000,Red,Rgb<155,0,255>,GhostWhite,Orange>,400>,White,650>,200,500>>(), "Hero_CFX_SS"},
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 {"Mantle_of_the_Force", "tracks/JFO13.wav",
 //CRYSTAL CHAMBER
 StylePtr<InOutHelper<OnSpark<Green,AudioFlicker<White,GreenYellow>,650>,200,500,Pulsing<Black,Green,4200>>>(),
@@ -57,16 +69,19 @@ StylePtr<InOutHelper<OnSpark<Green,AudioFlicker<White,GreenYellow>,650>,200,500,
 
 //MAIN BLADE
 StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Green,Pulsing<Gradient<Green,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Green,Green,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Green,Green>,Pulsing<Gradient<Green,Green,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Green,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Green,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Green>,Gradient<Green,Green,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Green,Green,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Green>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,90,80>,ColorSequence<1000,Red,Rgb<155,0,255>,GhostWhite>,400,75,4000000>,Aquamarine,400>,200,500>>(), "Ksith LS6 SS"},
+///////////////////////////////////////////////////////////////////////////////////////////////////
 
-
- { "Calibrate", "tracks/battery_charge1.wav",
+ 
+{ "Calibrate", "tracks/battery_charge1.wav",
  &style_charging,
   StyleNormalPtr<BLACK, BLACK, 300, 800>(),
   StyleNormalPtr<BLACK, BLACK, 300, 800>(), "Battery\nLevel"}
 };
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
 BladeConfig blades[] = {
  { 0, 
-    SubBlade(0, 0, WS281XBladePtr<130, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3>>()),
+    SubBlade(0, 0, WS2811BladePtr<130, WS2811_ACTUALLY_800kHz | WS2811_GRB>()),
 	SubBlade(1, 4, NULL),
 	SubBlade(5, 129, NULL),
     CONFIGARRAY(presets) },
