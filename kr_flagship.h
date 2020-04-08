@@ -1,5 +1,5 @@
 #ifdef CONFIG_TOP
-#include "proffieboard_v1_config.h"
+#include "proffieboard_config.h"
 #define NUM_BLADES 1
 #define NUM_BUTTONS 2
 #define VOLUME 2000
@@ -9,8 +9,13 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_MOTION
 #define ENABLE_WS2811
 #define ENABLE_SD
-#define SAVED_PRESET
+#define IDLE_OFF_TIME 90 * 1000
+#define SAVE_STATE
 #define NO_COLOR_SWING
+#endif
+
+#ifdef CONFIG_PROP
+#include "../props/saber_sa22c_buttons.h"
 #endif
 
 #ifdef CONFIG_PRESETS
@@ -51,6 +56,10 @@ StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Pulsing<BrownNoiseFlick
 
 {"Jedi_Killer", "tracks/jedikiller.wav",
 StylePtr<InOutHelper<OriginalBlast<SimpleClash<Lockup<Pulsing<HumpFlicker<BrownNoiseFlicker<DarkOrange,Rgb16<21919,0,0>,200>,BrownNoiseFlicker<Red,Rgb16<21919,0,0>,150>,50>,BrownNoiseFlicker<RandomPerLEDFlicker<Tomato,Black>,Black,150>,2100>,Pulsing<Gradient<StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>,StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>,RandomPerLEDFlicker<White,Strobe<Blue,White,50,1>>,StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>,StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>>,Gradient<StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>,StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>,RandomPerLEDFlicker<White,Strobe<Blue,White,50,1>>,StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>,StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>,StyleFire<Blast<LocalizedClash<BrownNoiseFlicker<Red,RandomPerLEDFlicker<Rgb<25,0,0>,Rgb<60,0,0>>,200>,White,80>,White>,Rgb<80,0,0>,0,8,FireConfig<10,1000,2>,FireConfig<4000,0,0>,FireConfig<2,1000,5>,FireConfig<100,0,5>>>,3500>,RandomPerLEDFlicker<Red,White>>,Red,80>,Magenta>,200,500>>(),"JediKiller"},
+
+
+{"WHITE", "tracks/",
+ StylePtr<InOutSparkTip<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<DeepSkyBlue,Snow>,Pulsing<Gradient<AudioFlicker<DeepSkyBlue,Snow>,AudioFlicker<DeepSkyBlue,Snow>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,Snow>,AudioFlicker<DeepSkyBlue,Snow>>,Gradient<AudioFlicker<DeepSkyBlue,Snow>,AudioFlicker<DeepSkyBlue,Snow>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,Snow>,AudioFlicker<DeepSkyBlue,Snow>,AudioFlicker<DeepSkyBlue,Snow>>,3500>,RandomPerLEDFlicker<Red,White>>>,White>,Gradient<Stripes<1000,-5000,AudioFlicker<DeepSkyBlue,Blue>,Snow,DeepSkyBlue,Blue>,AudioFlicker<DeepSkyBlue,Blue>,StyleFire<AudioFlicker<DeepSkyBlue,Blue>,GhostWhite>,Stripes<1000,5000,AudioFlicker<DeepSkyBlue,Blue>,Snow,DeepSkyBlue,Blue>>,650>,200,500,Snow>>(), "Ice Blue"},
 
 
    
