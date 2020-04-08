@@ -1,5 +1,5 @@
 #ifdef CONFIG_TOP
-#include "proffieboard_v1_config.h"
+#include "proffieboard_config.h"
 #define NUM_BLADES 1
 #define NUM_BUTTONS 2
 #define VOLUME 2300
@@ -9,8 +9,13 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_MOTION
 #define ENABLE_WS2811
 #define ENABLE_SD
-#define SAVED_PRESET
+#define IDLE_OFF_TIME 90 * 1000
+#define SAVE_STATE
 #define NO_COLOR_SWING
+#endif
+
+#ifdef CONFIG_PROP
+#include "../props/saber_sa22c_buttons.h"
 #endif
 
 #ifdef CONFIG_PRESETS
