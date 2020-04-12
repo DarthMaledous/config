@@ -153,12 +153,15 @@ StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<DeepSkyBlue,Rgb<
 BladeConfig blades[] = {
 	{ 0,
 // 5 ACCENT LED', MAIN BLADE & UPPER CRYSTAL CHAMBER
-		SubBlade(0, 4, WS281XBladePtr<131, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >()),
+		SubBlade(0, 4, WS281XBladePtr<130, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >()),
 		SubBlade(5, 129, NULL),
-		SubBlade(130, 130, NULL),
+//		SubBlade(130, 130, NULL),
+
+// UPPER CRYSTAL CHAMBER
+		WS281XBladePtr<1, blade2Pin, Color8::GRB, PowerPINS<bladePowerPin6> >(),
 
 // REVEAL & LOWERCRYSTAL CHAMBER LED's
-		SubBlade(0, 0, WS281XBladePtr<2, blade2Pin, Color8::GRB, PowerPINS<bladePowerPin4, bladePowerPin5> >()),
+		SubBlade(0, 0, WS281XBladePtr<2, blade3Pin, Color8::GRB, PowerPINS<bladePowerPin4, bladePowerPin5> >()),
 		SubBlade(1,1, NULL),
 	CONFIGARRAY(presets) },
 };
