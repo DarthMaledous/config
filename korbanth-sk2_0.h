@@ -21,7 +21,7 @@ const unsigned int maxLedsPerStrip = 144;
 #ifdef CONFIG_PRESETS
 Preset presets[] = {
 //RED BLADESTYLES
-{ "RED", "tracks/venus.wav",
+{ "RED", "tracks/",
 //ON BOARD LED's
 StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<Red,Rgb<100,0,0>,50>,BrownNoiseFlicker<Red,Rgb<100,0,0>,50>>,Blinking<Black,BrownNoiseFlicker<Red,Rgb<100,0,0>,50>,100,400>,AudioFlicker<Blue,White>>,Red>,300,800,Pulsing<Rgb<100,0,0>,Red,3200>>>(),
 
@@ -149,7 +149,16 @@ StylePtr<InOutHelper<SimpleClash<Lockup<Blast<TransitionEffect<BrownNoiseFlicker
 StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<DeepSkyBlue,Rgb<0,30,200>,50>,BrownNoiseFlicker<DeepSkyBlue,Rgb<0,30,200>,50>>,Blinking<Black,BrownNoiseFlicker<DeepSkyBlue,Rgb<0,30,200>,50>,100,400>,AudioFlicker<Blue,White>>,DeepSkyBlue>,300,800,Sequence<Black,DeepSkyBlue,500,37,0b1010100011100,0b111000111000101,0b100000000000000>>>(), "Fallen Order"},
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+{ "Calibrate", "tracks/Battery_Charge22.wav",
+ &style_charging,
+ StyleNormalPtr<BLACK, BLACK, 300, 800>(), 
+ StyleNormalPtr<Pulsing<Red, Rgb<50,0,0>, 5000>, White, 300, 800, Red>(), 
+ StyleNormalPtr<Sequence<Red,Black,100,37,0b1010100011100,0b111000111000101,0b100000000000000>,White,300,800,Red>(), 
+ StyleNormalPtr<BLACK, BLACK, 300, 800>(), "Battery\nLevel"}
 };
+
+
 BladeConfig blades[] = {
 	{ 0,
 // 5 ACCENT LED', MAIN BLADE & UPPER CRYSTAL CHAMBER
