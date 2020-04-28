@@ -30,6 +30,28 @@ StylePtr<InOutTr<Layers<AudioFlicker<RotateColorsX<Variation,Rgb<30,30,65>>,Rota
 StylePtr<InOutHelper<LocalizedClash<Lockup<Blast<TransitionEffect<TransitionEffect<BrownNoiseFlicker<DeepSkyBlue,DodgerBlue,40>,Gradient<BrownNoiseFlicker<SteelBlue,Azure,50>,White,StyleFire<SteelBlue,Blue,0,4>>,TrInstant,TrSmoothFade<1200>,EFFECT_IGNITION>,Gradient<Stripes<800,-5000,DodgerBlue,White,DeepSkyBlue,White>,Strobe<Black,White,15,1>,Stripes<1000,5000,DodgerBlue,White,DeepSkyBlue,White>>,TrInstant,TrSmoothFade<300>,EFFECT_LOCKUP_END>,White>,Pulsing<Gradient<BrownNoiseFlicker<DeepSkyBlue,Blue,40>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>>,Pulsing<Gradient<BrownNoiseFlicker<DeepSkyBlue,Blue,40>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>>,Gradient<BrownNoiseFlicker<DeepSkyBlue,Blue,40>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,BrownNoiseFlicker<DeepSkyBlue,Blue,40>>,1500>,2000>,AudioFlicker<Blue,White>>>,200,500>>(), ""},
 
 
+{"troy", "tracks/",
+StylePtr<InOutHelper<Layers<
+
+HumpFlicker<SteelBlue,DeepSkyBlue,50>,
+
+TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Snow,SteelBlue,2200>,Black>,TrWipeIn<500>>,EFFECT_IGNITION>,
+
+LocalizedClashL<Snow,90,70>,
+
+ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
+
+ResponsiveDragL<BrownNoiseFlicker<Blue,Strobe<AliceBlue,White,50,1>,100>>,
+
+ResponsiveLightningBlockL<BrownNoiseFlicker<Blue,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
+
+ResponsiveMeltL<BrownNoiseFlicker<Blue,Strobe<AliceBlue,White,50,1>,100>>,
+
+ResponsiveStabL<Gradient<Pulsing<Black,Rgb<0,25,45>,800>,Strobe<Rgb<0,25,45>,Black,15,1>,Pulsing<BrownNoiseFlicker<Snow,Yellow,50>,Yellow,800>>,TrConcat<TrFade<100>,Black,TrFade<100>>>,
+
+ResponsiveBlastL<ColorSequence<250,Snow,Yellow,Red>>>,
+
+200,300, Black>>(),"troy"},
 
 
 
