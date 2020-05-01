@@ -57,8 +57,21 @@ TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Yellow,AliceBlue,180
 ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,26000,4000,EFFECT_CLASH>,
 ResponsiveLightningBlockL<BrownNoiseFlicker<Rgb<100,60,0>,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
 ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,AudioFlicker<Rgb<100,60,0>,White>,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
-ResponsiveBlastL<Gradient<Strobe<Black,DodgerBlue,15,5>,Pulsing<GreenYellow,Red,100>,Pulsing<Blue,White,800>>,Int<300>,Int<100>,Int<300>,2600,4000,EFFECT_BLAST> >,
+ResponsiveMeltL<BrownNoiseFlicker<Red,Strobe<AliceBlue,Orange,50,1>,100>>,
+BlastL<AudioFlicker<Orange,Green>> >,
 TrConcat<TrWipe<200>,Gradient<Black,Pulsing<Snow,Rgb<100,60,0>,450>,Black>,TrFade<1200>>,TrConcat<TrInstant,Gradient<AudioFlicker<Black,Yellow>,Pulsing<Snow,Rgb<100,60,0>,350>,HumpFlicker<DarkOrange,Black,35>>,TrWipeIn<800>>>>(),"Executioner"},
+
+{"ScavengersDest", "tracks/",
+StylePtr<InOutTr<Layers<AudioFlicker<Chartreuse,Rgb<0,150,10>>,
+TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Green,Snow,1200>,Pulsing<Snow,GreenYellow,800>,Black>,TrSmoothFade<1600>>,EFFECT_IGNITION>,
+ResponsiveMeltL<Mix<TwistAngle<>,Red,Orange>,TrWipeIn<600>,TrSmoothFade<600>>,
+ResponsiveLightningBlockL<BrownNoiseFlicker<Green,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
+ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
+ResponsiveBlastWaveL<ColorSequence<200,Red,Magenta,DarkOrange>,Int<300>,Int<100>,Int<300>,26000,4000>,
+TransitionEffectL<TrBoing<300,2>, EFFECT_LOCKUP_END>,
+ResponsiveStabL<Gradient<AudioFlicker<Chartreuse,Rgb<0,150,10>>,AudioFlicker<Snow,Red>>,TrInstant,TrBoing<300,3>>, 
+LocalizedClashL<Gradient<Black,LightYellow,Yellow,Black>,90,70> >,
+TrWipe<200>,TrJoinR<TrSmoothFade<500>,TrWipeIn<500>>>>(), "Scavengers Destiny"},
 
 
 
