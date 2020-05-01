@@ -10,7 +10,12 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define NO_COLOR_SWING
-#define SAVED_PRESET
+#define IDLE_OFF_TIME 90 * 1000
+#define SAVE_STATE
+#endif
+
+#ifdef CONFIG_PROP
+#include "../props/saber_sa22c_buttons.h"
 #endif
 
 #ifdef CONFIG_PRESETS
@@ -37,14 +42,27 @@ StylePtr<InOutSparkTip<OnSpark<Blast<LocalizedClash<Lockup<HumpFlicker<DeepSkyBl
 
 
 {"KSith_Ascension", "tracks/",
+StylePtr<InOutTr<Layers<HumpFlicker<Rgb<25,50,110>,DodgerBlue,45>,
+TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Blue,AliceBlue,1800>,Pulsing<DodgerBlue,Black,2000>>,TrSmoothFade<1200>>,EFFECT_IGNITION>, 
+ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,26000,4000,EFFECT_CLASH>,
+ResponsiveLightningBlockL<BrownNoiseFlicker<Blue,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
+ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
+ResponsiveBlastL<Gradient<Strobe<Black,DodgerBlue,15,5>,Pulsing<GreenYellow,Red,100>,Pulsing<Blue,White,800>>,Int<300>,Int<100>,Int<300>,2600,4000,EFFECT_BLAST> >,
+TrConcat<TrWipe<200>,Gradient<Black,Pulsing<Snow,SteelBlue,450>,Black>,TrFade<1200>>,TrConcat<TrInstant,Gradient<AudioFlicker<Black,DodgerBlue>,Pulsing<Snow,SteelBlue,350>,HumpFlicker<DodgerBlue,Black,35>>,TrWipeIn<800>>>>(),"KSith_Ascension"},
+
+
+{"Executioner", "tracks/",
+StylePtr<InOutTr<Layers<HumpFlicker<Rgb<100,60,0>,DarkOrange,45>,
+TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Yellow,AliceBlue,1800>,Pulsing<Rgb<100,60,0>,Black,2000>>,TrSmoothFade<1200>>,EFFECT_IGNITION>, 
+ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,26000,4000,EFFECT_CLASH>,
+ResponsiveLightningBlockL<BrownNoiseFlicker<Rgb<100,60,0>,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
+ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,AudioFlicker<Rgb<100,60,0>,White>,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
+ResponsiveBlastL<Gradient<Strobe<Black,DodgerBlue,15,5>,Pulsing<GreenYellow,Red,100>,Pulsing<Blue,White,800>>,Int<300>,Int<100>,Int<300>,2600,4000,EFFECT_BLAST> >,
+TrConcat<TrWipe<200>,Gradient<Black,Pulsing<Snow,Rgb<100,60,0>,450>,Black>,TrFade<1200>>,TrConcat<TrInstant,Gradient<AudioFlicker<Black,Yellow>,Pulsing<Snow,Rgb<100,60,0>,350>,HumpFlicker<DarkOrange,Black,35>>,TrWipeIn<800>>>>(),"Executioner"},
 
 
 
-
-
-
-
-{ "SmthJedi", "tracks/mars.wav",
+{ "Calibrate", "tracks/Battery_Charge1.wav",
 &style_charging, "Battery\nLevel"}
 };
 BladeConfig blades[] = {
