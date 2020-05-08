@@ -8,6 +8,7 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_AUDIO
 #define ENABLE_MOTION
 #define ENABLE_WS2811
+#define ENABLE_SD
 #define NO_COLOR_SWING
 #define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
@@ -39,7 +40,7 @@ StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Pulsing<RandomFlicker<R
 StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<Red,Rgb<150,0,0>>,Pulsing<Gradient<AudioFlicker<Red,Rgb<150,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb<150,0,0>>,AudioFlicker<Red,Rgb<150,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb<150,0,0>>,AudioFlicker<Red,Rgb<150,0,0>>>,Pulsing<Gradient<AudioFlicker<Red,Rgb<150,0,0>>,AudioFlicker<Red,Rgb<150,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb<150,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb<150,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb<150,0,0>>>,Gradient<AudioFlicker<Red,Rgb<150,0,0>>,AudioFlicker<Red,Rgb<150,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb<150,0,0>>,AudioFlicker<Red,Rgb<150,0,0>>,Strobe<Green,BrownNoiseFlicker<Green,White,100>,50,1>,AudioFlicker<Red,Rgb<150,0,0>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,Green,80>,White>,RandomFlicker<Red,Black>,1200>,200,500>>(), "Vader4"},
 
 //Vader / Yellow_RedOrange with LocalizedClash and HumpFlicker
-{ "RogueVader_SS_KS", "tracks/vader-r1.wav",
+{ "The_Dark_Lord", "tracks/vader-r1.wav",
 StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,RandomFlicker<Red,LightPink>,2500>,Pulsing<Gradient<Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>,Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>,Strobe<Green,BrownNoiseFlicker<Green,Red,100>,50,1>,Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>,Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>>,Gradient<Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>,Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>,Strobe<Green,BrownNoiseFlicker<Green,Red,100>,50,1>,Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>,Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>,Pulsing<RandomFlicker<Rgb<150,0,0>,Red>,Rgb<150,0,0>,2500>>,3500>,RandomPerLEDFlicker<Red,White>>,GreenYellow,80>,GreenYellow>,MistyRose,1200>,200,500>>(), "Vader5"},
 
 // Vader / Sith Red_Green HumpFlicker
