@@ -10,7 +10,9 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define NO_COLOR_SWING
-#define SAVED_PRESET
+#define IDLE_OFF_TIME 90 * 1000
+#define SAVE_STATE
+#define DISABLE_DIAGNOSTIC_COMMANDS
 #endif
 
 #ifdef CONFIG_PROP
@@ -90,6 +92,24 @@ StylePtr<InOutHelper<SimpleClash<Lockup<Blast<TransitionEffect<BrownNoiseFlicker
 //LOWER CRYSTAL CHAMBER
 StylePtr<InOutHelper<SimpleClash<Lockup<Blast<BrownNoiseFlicker<Red,Rgb<100,0,0>,50>,BrownNoiseFlicker<Red,Rgb<100,0,0>,50>>,Blinking<Black,BrownNoiseFlicker<Red,Rgb<100,0,0>,50>,100,400>,AudioFlicker<Blue,White>>,Red>,300,800,Sequence<Red,Black,500,37,0b1010100011100,0b111000111000101,0b100000000000000>>>(), "The Second" },
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+{"troy", "tracks/",
+//ON BOARD LED's
+StylePtr<InOutHelper<OnSpark<SimpleClash<Lockup<Blast<Red,Red>,Red,AudioFlicker<Blue,White>>,Red>,AudioFlicker<Red,Orange>>,300,800>>(),
+
+
+//MAIN BLADE
+StylePtr<InOutTr<Layers<AudioFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>>,TransitionEffectL<TrConcat<TrFade<400>,Mix<SwingSpeed<600>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrDelay<30000>,Mix<SwingSpeed<600>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrFade<800>>,EFFECT_FORCE>,TransitionEffectL<TrConcat<TrInstant,BrownNoiseFlickerL<AlphaL<White,Int<16000>>,Int<50>>,TrSmoothFade<600>>,EFFECT_LOCKUP_END>,ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Blue,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,ResponsiveLightningBlockL<Strobe<White,AudioFlicker<White,Blue>,50,1>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>,ResponsiveBlastWaveL<White,Int<400>,Scale<SwingSpeed<200>,Int<100>,Int<400>>,Int<400>>,ResponsiveClashL<White>,TransitionEffectL<TrConcat<TrInstant,AudioFlickerL<White>,TrFade<800>>,EFFECT_IGNITION>,TransitionEffectL<TrConcat<TrInstant,HumpFlickerL<White,40>,TrFade<1000>>,EFFECT_RETRACTION>,ResponsiveStabL<OrangeRed,TrWipeIn<600>,TrWipe<600>>,ResponsiveDragL<BrownNoiseFlickerL<White,Int<300>>,TrWipeIn<400>,TrFade<400>>,ResponsiveMeltL<Mix<TwistAngle<>,OrangeRed,Orange>,TrWipeIn<600>,TrSmoothFade<600>>>,TrWipeSparkTip<White,300>,TrWipe<500>,Layers<Black,TransitionEffectL<TrConcat<TrDelay<1500>,Black,TrFade<1000>,AlphaL<Mix<BatteryLevel,Red,Green>,Bump<Int<0>,Int<6000>>>,TrFade<3000>>,EFFECT_BOOT>,TransitionEffectL<TrConcat<TrDelay<1500>,Black,TrFade<1000>,AlphaL<Mix<BatteryLevel,Red,Green>,Bump<Int<0>,Int<6000>>>,TrFade<3000>>,EFFECT_NEWFONT>,TransitionEffectL<TrConcat<TrInstant,AlphaL<Mix<BatteryLevel,Red,Green>,Bump<Int<0>,Int<6000>>>,TrFade<3000>>,EFFECT_RETRACTION>,TransitionEffectL<TrConcat<TrFade<2000>,AlphaL<HumpFlickerL<Rgb<120,120,165>,10>,Bump<Int<0>,Int<4000>>>,TrFade<2950>,AlphaL<HumpFlickerL<Rgb<120,120,165>,15>,Bump<Int<0>,Int<5000>>>,TrFade<3000>,AlphaL<HumpFlickerL<Rgb<120,120,165>,20>,Bump<Int<0>,Int<6000>>>,TrBoing<1000,3>>,EFFECT_PREON>>>>(),
+
+//UPPER CRYSTAL CHAMBER
+StylePtr<InOutTr<Layers<Mix<SwingSpeed<400>,AudioFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>>,Mix<SwingSpeed<600>,RotateColorsX<Variation,Red>,RotateColorsX<Variation,Tomato>>>,TransitionEffectL<TrConcat<TrInstant,BrownNoiseFlickerL<AlphaL<White,Int<16000>>,Int<50>>,TrSmoothFade<600>>,EFFECT_LOCKUP_END>,ResponsiveLockupL<AlphaL<Red,Int<0>>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,ResponsiveLightningBlockL<AlphaL<Red,Int<0>>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>>,TrWipe<150>,TrWipeIn<300>,Pulsing<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>,2000>>>(),
+
+//REVEAL CHAMBER
+StylePtr<InOutHelper<SimpleClash<Lockup<Blast<TransitionEffect<BrownNoiseFlicker<Red,Rgb<100,0,0>,25>,Blinking<Black,Red,150,500>,TrInstant,TrSmoothFade<4500>,EFFECT_IGNITION>,BrownNoiseFlicker<Red,Rgb<100,0,0>,25>>,Blinking<Black,BrownNoiseFlicker<Red,Rgb<100,0,0>,25>,100,400>,AudioFlicker<Blue,White>>,Red>,300,800,Sequence<Red,Black,500,37,0b1010100011100,0b111000111000101,0b100000000000000>>>(),
+
+
+//LOWER CRYSTALCHAMBER
+StylePtr<InOutTr<Layers<AudioFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>>,TransitionEffectL<TrConcat<TrInstant,BrownNoiseFlickerL<AlphaL<White,Int<16000>>,Int<50>>,TrSmoothFade<600>>,EFFECT_LOCKUP_END>,ResponsiveLockupL<AlphaL<Red,Int<0>>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,ResponsiveLightningBlockL<AlphaL<Red,Int<0>>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>>,TrWipe<120>,TrWipeIn<300>,Pulsing<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>,2000>>>(), "TROY"},
 
 
 
