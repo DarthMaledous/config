@@ -107,6 +107,18 @@ StylePtr<InOutHelper<Sequence<Red,Black,200,37,0b111000111000101,0b1000000000000
 StylePtr<IgnitionDelay<1000, InOutHelper<SimpleClash<Lockup<Blast<Yellow,Blinking<Yellow,Black,70,500>>,AudioFlicker<Blue,White>>,Blinking<Black,Yellow,150,500>>,300,800,Pulsing<Black,Yellow,5000>>>>(), "purple"},
 
 ////////////////////////////////////////////////////////////////
+{"Inquisitorious", "tracks/",
+// 5 LED PCB
+StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Red,Pulsing<Gradient<Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red>,Pulsing<Gradient<Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red>,Gradient<Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,Yellow,90>,Green>,GhostWhite,850>,200,500,Pulsing<Black,Gradient<Pulsing<Red,Yellow,2000>,Pulsing<OrangeRed,PapayaWhip,800>,Pulsing<PapayaWhip,Orange,800>,Pulsing<Yellow,Red,2000>>,6500>>>(),
+
+//MAIN BLADE
+StylePtr<Layers<AudioFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>>,TransitionEffectL<TrConcat<TrFade<400>,Mix<SwingSpeed<600>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrDelay<30000>,Mix<SwingSpeed<600>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrFade<800>>,EFFECT_FORCE>,TransitionEffectL<TrConcat<TrInstant,BrownNoiseFlickerL<AlphaL<White,Int<16000>>,Int<50>>,TrSmoothFade<600>>,EFFECT_LOCKUP_END>,ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Blue,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>,Scale<BladeAngle<0,16000>,Int<4000>,Int<26000>>,Int<6000>,Scale<SwingSpeed<100>,Int<10000>,Int<14000>>>,ResponsiveLightningBlockL<Strobe<White,AudioFlicker<White,Blue>,50,1>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>,ResponsiveBlastWaveL<White,Int<400>,Scale<SwingSpeed<200>,Int<100>,Int<400>>,Int<400>>,ResponsiveClashL<White,TrInstant,TrFade<400>,Scale<BladeAngle<0,16000>,Int<10000>,Int<30000>>,Int<10000>>,TransitionEffectL<TrConcat<TrInstant,StyleFire<RotateColorsX<Variation,Rgb<255,150,150>>,RotateColorsX<Variation,Rgb<60,0,0>>,0,6>,TrFade<1200>>,EFFECT_IGNITION>,TransitionEffectL<TrConcat<TrInstant,HumpFlickerL<White,40>,TrFade<1000>>,EFFECT_RETRACTION>,ResponsiveStabL<Orange,TrWipeIn<600>,TrWipe<600>>,ResponsiveDragL<BrownNoiseFlickerL<White,Int<300>>,TrWipeIn<400>,TrFade<400>>,ResponsiveMeltL<Mix<TwistAngle<>,OrangeRed,Orange>,TrWipeIn<600>,TrSmoothFade<600>>,InOutTrL<TrWipeX<Scale<BladeAngle<>,Int<500>,Int<200>>>,TrWipe<500>,Black>,TransitionEffectL<TrConcat<TrFade<2000>,AlphaL<HumpFlickerL<Rgb<120,120,165>,10>,Bump<Int<0>,Int<4000>>>,TrFade<2950>,AlphaL<HumpFlickerL<Rgb<120,120,165>,15>,Bump<Int<0>,Int<5000>>>,TrFade<3000>,AlphaL<HumpFlickerL<Rgb<120,120,165>,20>,Bump<Int<0>,Int<6000>>>,TrBoing<1000,3>>,EFFECT_PREON>>>(),
+
+StylePtr<InOutHelper<Sequence<Red,Black,500,37,0b1010100011100,0b111000111000101,0b100000000000000>,1,1,Blinking<Red,Black,2000,200>>>(),
+StylePtr<InOutHelper<Sequence<Red,Black,200,37,0b111000111000101,0b100000000000000,0b111000111000101>,1,1,Blinking<Red,Black,4500,200>>>(), 
+StylePtr<IgnitionDelay<1000, InOutHelper<SimpleClash<Lockup<Blast<Yellow,Blinking<Yellow,Black,70,500>>,AudioFlicker<Blue,White>>,Blinking<Black,Yellow,150,500>>,300,800,Pulsing<Black,Yellow,5000>>>>(), "Outstanding"},
+
+
 { "Calibrate", "tracks/Battery_Charge1.wav",
  &style_charging,
  StyleNormalPtr<BLACK, BLACK, 300, 800>(), 
