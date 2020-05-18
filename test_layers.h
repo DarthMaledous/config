@@ -57,14 +57,24 @@ Preset presets[] = {
 //StylePtr<InOutTr<Layers<AudioFlicker<Green,White>,TransitionEffectL<TrConcat<TrInstant,AudioFlickerL<White>,TrFade<1000>>,EFFECT_RETRACTION>>, TrColorCycle<3000>, TrFade<500>>>(),"Test2"},
 StylePtr<InOutTr<Layers<HumpFlicker<Rgb<25,50,110>,DodgerBlue,45>,
 TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Blue,AliceBlue,1800>,Pulsing<DodgerBlue,Black,2000>>,TrSmoothFade<1200>>,EFFECT_IGNITION>, 
-ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,26000,4000,EFFECT_CLASH>,
+ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,Int<26000>,Int<4000>,EFFECT_CLASH>,
 ResponsiveLightningBlockL<BrownNoiseFlicker<Blue,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
 ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
-//ResponsiveBlastL<Gradient<Strobe<Black,DodgerBlue,15,5>,Pulsing<GreenYellow,Red,100>,Pulsing<Blue,White,800>>,Int<300>,Int<100>,Int<300>,2600,4000,EFFECT_BLAST> 
+ResponsiveBlastL<Gradient<Strobe<Black,DodgerBlue,15,5>,Pulsing<GreenYellow,Red,100>,Pulsing<Blue,White,800>>,Int<300>,Int<100>,Int<300>,Int<2600>,Int<4000>,EFFECT_BLAST>, 
 BlastL<AudioFlicker<Orange,Green>> >,
 TrConcat<TrWipe<200>,Gradient<Black,Pulsing<Snow,SteelBlue,450>,Black>,TrFade<1200>>,TrConcat<TrInstant,Gradient<AudioFlicker<Black,DodgerBlue>,Pulsing<Snow,SteelBlue,350>,HumpFlicker<DodgerBlue,Black,35>>,TrWipeIn<800>>>>(),"Test2"},
 
 //TrColorCycle<3000>, TrWipeIn<500>>>(),"Test2"},
+
+{"Test3", "tracks/",
+StylePtr<InOutTr<Layers<AudioFlicker<Rgb<240,120,0>,Rgb<95,95,0>>,
+TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Snow,Black,1200>,Pulsing<Black,GhostWhite,1600>,Black>,TrSmoothFade<1200>>,EFFECT_IGNITION>,
+ResponsiveBlastWaveL<White,Int<400>,Int<100>,Int<400>,Int<26000>,Int<4000>,EFFECT_CLASH>,
+ResponsiveMeltL<Mix<TwistAngle<>,Red,Orange>,TrWipeIn<600>,TrSmoothFade<600>>,
+ResponsiveLightningBlockL<BrownNoiseFlicker<Rgb<100,60,0>,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
+ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,AudioFlicker<Rgb<100,60,0>,White>,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
+BlastL<AudioFlicker<Orange,Green>> >,
+TrWipe<200>,TrConcat<TrBoing<300,5>,AudioFlicker<Orange,Snow>,TrWipeIn<500>>>>(), "Test3"},
 	
    { "Calibrate", "tracks/Battery_Charge_22.wav",
     &style_charging, "Battery\nLevel"}
