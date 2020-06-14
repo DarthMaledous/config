@@ -75,6 +75,23 @@ ResponsiveLightningBlockL<BrownNoiseFlicker<Rgb<100,60,0>,Strobe<AliceBlue,White
 ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,AudioFlicker<Rgb<100,60,0>,White>,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
 BlastL<AudioFlicker<Orange,Green>> >,
 TrWipe<200>,TrConcat<TrBoing<300,5>,AudioFlicker<Orange,Snow>,TrWipeIn<500>>>>(), "Test3"},
+
+{"Test4", "tracks/",
+StylePtr<InOutTr<Layers<RandomFlicker<Red,Rgb<195,0,0>>,
+LocalizedClashL<Snow,90,65>,
+ResponsiveBlastWaveL<Blue,Int<500>,Int<100>,Int<26000>,Int<4000>>,
+ResponsiveLockupL<>  >,
+
+
+
+
+
+
+
+
+TrConcat<TrWipe<300>,Gradient<AudioFlicker<Orange,Snow>,Pulsing<White,Black,1800>,AudioFlicker<DarkOrange,Snow>>,TrFade<900>>,TrWipeIn<500>>>(),"Test4"},
+
+
 	
    { "Calibrate", "tracks/Battery_Charge_22.wav",
     &style_charging, "Battery\nLevel"}
