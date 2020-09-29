@@ -10,6 +10,7 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define NO_COLOR_SWING
+#define SHTOK_GESTURE_IGNITION
 #define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
 #endif
