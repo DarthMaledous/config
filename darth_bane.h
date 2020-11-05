@@ -38,6 +38,15 @@ StylePtr<Layers<Pulsing<Stripes<3000,-3000,RotateColorsX<Variation,Red>,RotateCo
 //SWITCH LED's
 StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(),
 StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset2"},
+//////////////////////
+	{"TheRuleOfTwo", "tracks/",
+StylePtr<Layers<HumpFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>,50>,TransitionEffectL<TrConcat<TrFade<400>,Mix<SwingSpeed<400>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrDelay<30000>,Mix<SwingSpeed<400>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrFade<800>>,EFFECT_FORCE>,AlphaL<BrownNoiseFlicker<Red,Black,300>,SwingSpeed<400>>,TransitionEffectL<TrConcat<TrInstant,BrownNoiseFlickerL<AlphaL<White,Int<16000>>,Int<50>>,TrSmoothFade<600>>,EFFECT_LOCKUP_END>,ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Blue,300>,50,1>,TrConcat<TrInstant,White,TrFade<400>>,TrFade<100>,Scale<BladeAngle<0,16000>,Int<4000>,Int<26000>>,Int<6000>,Scale<SwingSpeed<100>,Int<10000>,Int<14000>>>,ResponsiveLightningBlockL<Strobe<White,AudioFlicker<White,Blue>,50,1>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>,ResponsiveStabL<Orange,TrWipeIn<600>,TrWipe<600>>,ResponsiveBlastL<White,Int<400>,Scale<SwingSpeed<200>,Int<100>,Int<400>>,Int<400>>,ResponsiveClashL<White,TrInstant,TrFade<400>,Scale<BladeAngle<0,16000>,Int<4000>,Int<26000>>,Int<6000>>,TransitionEffectL<TrConcat<TrInstant,HumpFlickerL<White,40>,TrFade<800>>,EFFECT_IGNITION>,LockupTrL<AlphaL<BrownNoiseFlickerL<White,Int<300>>,SmoothStep<Int<30000>,Int<5000>>>,TrWipeIn<400>,TrFade<300>,SaberBase::LOCKUP_DRAG>,LockupTrL<AlphaL<Mix<TwistAngle<>,Rgb<255,200,0>,DarkOrange>,SmoothStep<Int<28000>,Int<5000>>>,TrWipeIn<600>,TrFade<300>,SaberBase::LOCKUP_MELT>,InOutTrL<TrWipe<300>,TrJoinR<TrWipe<500>,TrWipeIn<500>>,Black>>>(),
+
+//SWITCH LED's
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(),
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset3"},
+//////////////////////
+	
 
 /////////////////////
 {"Inquisitorious", "tracks/",
@@ -45,7 +54,16 @@ StylePtr<Layers<RandomFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variati
 
 //SWITCH LED's
 StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(),
-StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset3"},
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset4"},
+/////////////////////
+
+{"Legion", "tracks/",
+StylePtr<Layers<HumpFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variation,Rgb<128,0,0>>,50>,TransitionEffectL<TrConcat<TrFade<400>,Mix<SwingSpeed<400>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrDelay<30000>,Mix<SwingSpeed<400>,AudioFlickerL<Rgb<150,0,0>>,Red>,TrFade<800>>,EFFECT_FORCE>,AlphaL<BrownNoiseFlicker<RotateColorsX<Variation,Rgb<255,150,150>>,Black,300>,SwingSpeed<400>>,TransitionEffectL<TrConcat<TrInstant,BrownNoiseFlickerL<AlphaL<White,Int<16000>>,Int<50>>,TrSmoothFade<600>>,EFFECT_LOCKUP_END>,LockupTrL<AlphaL<Strobe<White,BrownNoiseFlicker<White,Blue,300>,50,1>,Bump<Sin<Int<10>,Int<10000>,Int<20000>>,Int<12000>>>,TrConcat<TrInstant,White,TrFade<400>>,TrFade<100>,SaberBase::LOCKUP_NORMAL>,ResponsiveLightningBlockL<Strobe<White,AudioFlicker<White,Blue>,50,1>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>,ResponsiveStabL<Orange,TrWipeIn<600>,TrWipe<600>>,ResponsiveBlastWaveL<White,Int<400>,Scale<SwingSpeed<200>,Int<100>,Int<400>>,Int<400>>,LocalizedClashL<White>,TransitionEffectL<TrConcat<TrInstant,HumpFlickerL<White,40>,TrFade<800>>,EFFECT_IGNITION>,LockupTrL<AlphaL<BrownNoiseFlickerL<White,Int<300>>,SmoothStep<Int<30000>,Int<5000>>>,TrWipeIn<400>,TrFade<300>,SaberBase::LOCKUP_DRAG>,LockupTrL<AlphaL<Mix<TwistAngle<>,Rgb<255,200,0>,DarkOrange>,SmoothStep<Int<28000>,Int<5000>>>,TrWipeIn<600>,TrFade<300>,SaberBase::LOCKUP_MELT>,InOutTrL<TrConcat<TrWipeIn<200>,RandomBlink<30000,White,Black>,TrWipeIn<200>,Mix<SmoothStep<Scale<SlowNoise<Int<30000>>,Int<1000>,Int<6000>>,Int<-3000>>,Black,White>,TrDelay<400>,Mix<SmoothStep<Int<4000>,Int<-3000>>,Black,White>,TrWipe<300>>,TrJoinR<TrWipe<500>,TrWipeIn<500>>,Black>>>(),
+
+//SWITCH LED's
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(),
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset5"},
+//////////////////////
 
 /////////////////////
 {"Nextor", "tracks/",
@@ -59,10 +77,10 @@ StylePtr<Layers<
  
  // SWITCH LED's
  StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(),
-StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset4"},
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset6"},
 
 /////////////////////
-{"Korriban, "tracks/",
+{"Corellian", "tracks/",
 StylePtr<Layers<
   RandomFlicker<OrangeRed,Orange>,
   ResponsiveBlastL<White>,
@@ -73,7 +91,7 @@ StylePtr<Layers<
  
  //
 StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(),
-StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset5"},
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset7"},
 
 /////////////////////
 
@@ -82,7 +100,7 @@ StylePtr<Layers<Stripes<3000,-3500,RotateColorsX<Variation,Red>,RandomPerLEDFlic
 
  //SWITCH LED's
 StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(),
-StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset6"},
+StylePtr<Layers<Red,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_NORMAL>,LockupTrL<AudioFlickerL<Black>,TrInstant,TrFade<500>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,InOutTrL<TrInstant,TrFade<500>,RotateColorsX<Variation,Red>>>>(), "preset8"},
 
 { "Calibrate", "tracks/Battery_Charge1.wav",
  &style_charging,
