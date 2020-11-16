@@ -12,6 +12,7 @@ const unsigned int maxLedsPerStrip = 144;
 #define NO_COLOR_SWING
 #define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
+#define SHTOK_GESTURE_IGNITION
 #endif
 
 #ifdef CONFIG_PROP
@@ -44,17 +45,17 @@ StylePtr<InOutSparkTip<OnSpark<Blast<LocalizedClash<Lockup<HumpFlicker<DeepSkyBl
 {"KSith_Ascension", "tracks/",
 StylePtr<InOutTr<Layers<HumpFlicker<Rgb<25,50,110>,DodgerBlue,45>,
 TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Blue,AliceBlue,1800>,Pulsing<DodgerBlue,Black,2000>>,TrSmoothFade<1200>>,EFFECT_IGNITION>, 
-ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,26000,4000,EFFECT_CLASH>,
+ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,Int<26000>,Int<4000>,EFFECT_CLASH>,
 ResponsiveLightningBlockL<BrownNoiseFlicker<Blue,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
 ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
-ResponsiveBlastL<Gradient<Strobe<Black,DodgerBlue,15,5>,Pulsing<GreenYellow,Red,100>,Pulsing<Blue,White,800>>,Int<300>,Int<100>,Int<300>,2600,4000,EFFECT_BLAST> >,
+ResponsiveBlastL<Gradient<Strobe<Black,DodgerBlue,15,5>,Pulsing<GreenYellow,Red,100>,Pulsing<Blue,White,800>>,Int<300>,Int<100>,Int<300>,Int<2600>,Int<4000>,EFFECT_BLAST> >,
 TrConcat<TrWipe<200>,Gradient<Black,Pulsing<Snow,SteelBlue,450>,Black>,TrFade<1200>>,TrConcat<TrInstant,Gradient<AudioFlicker<Black,DodgerBlue>,Pulsing<Snow,SteelBlue,350>,HumpFlicker<DodgerBlue,Black,35>>,TrWipeIn<800>>>>(),"KSith_Ascension"},
 
 
 {"Executioner", "tracks/",
 StylePtr<InOutTr<Layers<HumpFlicker<Rgb<100,60,0>,DarkOrange,45>,
 TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Yellow,AliceBlue,1800>,Pulsing<Rgb<100,60,0>,Black,2000>>,TrSmoothFade<1200>>,EFFECT_IGNITION>, 
-ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,26000,4000,EFFECT_CLASH>,
+ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,Int<26000>,Int<4000>,EFFECT_CLASH>,
 ResponsiveLightningBlockL<BrownNoiseFlicker<Rgb<100,60,0>,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
 ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,AudioFlicker<Rgb<100,60,0>,White>,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
 ResponsiveMeltL<BrownNoiseFlicker<Red,Strobe<AliceBlue,Orange,50,1>,100>>,
@@ -67,11 +68,14 @@ TransitionEffectL<TrConcat<TrInstant,Gradient<Black,Pulsing<Green,Snow,1200>,Pul
 ResponsiveMeltL<Mix<TwistAngle<>,Red,Orange>,TrWipeIn<600>,TrSmoothFade<600>>,
 ResponsiveLightningBlockL<BrownNoiseFlicker<Green,Strobe<AliceBlue,White,50,1>,100>,TrConcat<TrInstant,AliceBlue,TrFade<200>>,TrFade<400>>,
 ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>>,
-ResponsiveBlastWaveL<ColorSequence<200,Red,Magenta,DarkOrange>,Int<300>,Int<100>,Int<300>,26000,4000>,
+ResponsiveBlastWaveL<ColorSequence<200,Red,Magenta,DarkOrange>,Int<300>,Int<100>,Int<300>,Int<26000>,Int<4000>>,
 TransitionEffectL<TrBoing<300,2>, EFFECT_LOCKUP_END>,
 ResponsiveStabL<Gradient<AudioFlicker<Chartreuse,Rgb<0,150,10>>,AudioFlicker<Snow,Red>>,TrInstant,TrBoing<300,3>>, 
 LocalizedClashL<Gradient<Black,LightYellow,Yellow,Black>,90,70> >,
 TrWipe<200>,TrJoinR<TrSmoothFade<500>,TrWipeIn<500>>>>(), "Scavengers Destiny"},
+
+{"Photonblade", "tracks/",
+StylePtr<Layers<Mix<SwingSpeed<400>,AudioFlicker<RotateColorsX<Variation,DeepSkyBlue>,RotateColorsX<Variation,SteelBlue>>,Mix<SwingSpeed<600>,RotateColorsX<Variation,DeepSkyBlue>,White>>,AlphaL<BrownNoiseFlicker<RotateColorsX<Variation,DeepSkyBlue>,Black,300>,SwingSpeed<400>>,TransitionEffectL<TrConcat<TrInstant,AlphaL<Mix<SmoothStep<Scale<BladeAngle<>,Scale<BladeAngle<0,16000>,Int<10000>,Int<30000>>,Int<10000>>,Int<1000>>,Stripes<1500,2000,White,DeepSkyBlue>,Stripes<1500,-2500,White,DeepSkyBlue>>,Int<16384>>,TrFade<800>>,EFFECT_LOCKUP_END>,ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<400>>,TrFade<100>,Scale<BladeAngle<0,16000>,Int<10000>,Int<30000>>,Int<10000>,Scale<SwingSpeed<100>,Int<10000>,Int<14000>>>,ResponsiveLightningBlockL<Strobe<White,AudioFlicker<White,Blue>,50,1>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>,ResponsiveStabL<Red,TrWipeIn<600>,TrWipe<600>>,ResponsiveBlastWaveL<White,Int<400>,Scale<SwingSpeed<200>,Int<100>,Int<400>>,Int<400>>,ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,Scale<BladeAngle<0,16000>,Int<10000>,Int<30000>>,Int<10000>,EFFECT_CLASH>,TransitionEffectL<TrConcat<TrInstant,AudioFlickerL<White>,TrFade<800>>,EFFECT_IGNITION>,LockupTrL<AlphaL<BrownNoiseFlickerL<White,Int<300>>,SmoothStep<Int<30000>,Int<5000>>>,TrWipeIn<400>,TrFade<300>,SaberBase::LOCKUP_DRAG>,LockupTrL<AlphaL<Mix<TwistAngle<>,Red,Orange>,SmoothStep<Int<28000>,Int<5000>>>,TrWipeIn<600>,TrFade<300>,SaberBase::LOCKUP_MELT>,InOutTrL<TrWipe<300>,TrWipeIn<1200>,Black>,TransitionEffectL<TrConcat<TrBoing<3000,5>,AlphaL<BrownNoiseFlickerL<RotateColorsX<Variation,DeepSkyBlue>,Int<100>>,Bump<Int<0>,Int<4000>>>,TrBoing<3000,3>,Black,TrBoing<1400,3>,AlphaL<BrownNoiseFlickerL<RotateColorsX<Variation,DeepSkyBlue>,Int<200>>,Bump<Int<0>,Int<6000>>>,TrBoing<550,3>>,EFFECT_PREON>>>(), "Photon Blade"},
 
 
 
