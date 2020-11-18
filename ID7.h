@@ -12,7 +12,8 @@ const unsigned int maxLedsPerStrip = 144;
 #define NO_COLOR_SWING
 #define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
-#define SHTOK_GESTURE_IGNITION
+#define SA22C_SWING_ON
+#define SA22C_TWIST_OFF
 #endif
 
 #ifdef CONFIG_PROP
