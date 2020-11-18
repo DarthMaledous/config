@@ -13,10 +13,14 @@ const unsigned int maxLedsPerStrip = 144;
 #define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
 #define DISABLE_DIAGNOSTIC_COMMANDS
+#define FETT263_SWING_ON_NO_BM
+#define FETT263_SWING_ON_PREON
+#define FETT263_TWIST_OFF
 #endif
 
 #ifdef CONFIG_PROP
-#include "../props/saber_sa22c_buttons.h"
+//#include "../props/saber_sa22c_buttons.h"
+#include "../props/saber_fett263_buttons.h"
 #endif
 
 
