@@ -1,5 +1,5 @@
 #ifdef CONFIG_TOP
-#include "proffieboard_v2_config.h"
+#include "proffieboard_config.h"
 #define NUM_BLADES 1
 #define NUM_BUTTONS 2
 #define VOLUME 2500
@@ -10,12 +10,23 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define NO_COLOR_SWING
-#define SAVED_PRESET
 #define ORIENTATION ORIENTATION_USB_TOWARDS_BLADE
+#define IDLE_OFF_TIME 90 * 1000
+#define FETT263_SWING_ON_NO_BM
+#define FETT263_SWING_ON_PREON
+#define FETT263_TWIST_OFF
+#define SAVE_STATE
+#endif
+
+#ifdef CONFIG_PROP
+#include "../props/saber_fett263_buttons.h"
 #endif
 
 #ifdef CONFIG_PRESETS
 Preset presets[] = {
+{"Transfer_Blade", "tracks/",
+StylePtr<Layers<Mix<SwingSpeed<100>,AudioFlicker<RotateColorsX<Variation,Blue>,RotateColorsX<Variation,Rgb<0,0,128>>>,StyleFire<BrownNoiseFlicker<RotateColorsX<Variation,Blue>,RandomPerLEDFlicker<RotateColorsX<Variation,Rgb<0,0,25>>,RotateColorsX<Variation,Rgb<0,0,60>>>,300>,RotateColorsX<Variation,Rgb<0,0,80>>,0,6,FireConfig<10,1000,2>,FireConfig<10,1000,2>,FireConfig<10,1000,2>,FireConfig<10,1000,2>>>,TransitionEffectL<TrConcat<TrFade<400>,Mix<SwingSpeed<600>,AudioFlickerL<RotateColorsX<Variation,Rgb<150,150,255>>>,White>,TrDelay<30000>,Mix<SwingSpeed<600>,AudioFlickerL<RotateColorsX<Variation,Rgb<150,150,255>>>,White>,TrFade<800>>,EFFECT_FORCE>,TransitionEffectL<TrConcat<TrInstant,BrownNoiseFlickerL<AlphaL<White,Int<16000>>,Int<50>>,TrSmoothFade<600>>,EFFECT_LOCKUP_END>,ResponsiveLockupL<Strobe<White,BrownNoiseFlicker<White,Red,300>,50,1>,TrConcat<TrInstant,White,TrFade<200>>,TrFade<400>,Scale<BladeAngle<0,16000>,Int<10000>,Int<30000>>,Int<10000>,Scale<SwingSpeed<100>,Int<10000>,Int<14000>>>,ResponsiveLightningBlockL<Strobe<White,AudioFlicker<White,Blue>,50,1>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>,ResponsiveBlastWaveL<White,Int<400>,Scale<SwingSpeed<200>,Int<100>,Int<400>>,Int<400>>,ResponsiveBlastWaveL<White,Int<300>,Int<100>,Int<300>,Scale<BladeAngle<0,16000>,Int<10000>,Int<30000>>,Int<10000>,EFFECT_CLASH>,TransitionEffectL<TrConcat<TrInstant,AudioFlickerL<White>,TrFade<1000>>,EFFECT_RETRACTION>,AlphaL<Black,SmoothStep<Scale<SlowNoise<Int<1800>>,Int<22000>,Int<40000>>,Int<24000>>>,ResponsiveStabL<Red,TrWipeIn<600>,TrWipe<600>>,ResponsiveDragL<BrownNoiseFlickerL<White,Int<300>>,TrWipeIn<400>,TrFade<400>>,ResponsiveMeltL<Mix<TwistAngle<>,Red,Orange>,TrWipeIn<600>,TrSmoothFade<600>>,InOutTrL<TrWipeSparkTip<White,800>,TrWipeInSparkTip<White,1400>,Black>,TransitionEffectL<TrConcat<TrFade<1500>,AlphaL<Pulsing<Rgb<120,120,165>,Rgb<50,50,80>,500>,Bump<Int<0>,Int<5000>>>,TrBoing<3000,5>,AlphaL<Pulsing<Rgb<120,120,165>,Rgb<50,50,80>,500>,Bump<Int<0>,Int<6000>>>,TrBoing<3500,10>>,EFFECT_PREON>>>(), "Transfer Blade"},
+
 { "Blind_Cowboy_Proffie", "tracks/Jedi_Academy1.wav",
 StylePtr<InOutHelper<OnSpark<BlastFadeout<SimpleClash<Lockup<RandomFlicker<Blue,DodgerBlue>,Pulsing<Gradient<RandomFlicker<Blue,DodgerBlue>,RandomFlicker<Blue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Blue,DodgerBlue>,RandomFlicker<Blue,DodgerBlue>>,Gradient<RandomFlicker<Blue,DodgerBlue>,RandomFlicker<Blue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,RandomFlicker<Blue,DodgerBlue>,RandomFlicker<Blue,DodgerBlue>,RandomFlicker<Blue,DodgerBlue>>,3500>,RandomPerLEDFlicker<Red,White>>,Gradient<StyleFire<GreenYellow,GhostWhite,1,3>,GhostWhite,StyleFire<GreenYellow,GhostWhite,1,3>>,200>,Gradient<StyleFire<Red,White,0,3,FireConfig<0,2000,5>,FireConfig<3000,0,0>,FireConfig<0,5000,7>,FireConfig<0,3,5>>,HumpFlicker<Yellow,Orange,50>,StyleFire<Red,White,0,3,FireConfig<0,2000,5>,FireConfig<3000,0,0>,FireConfig<0,5000,7>,FireConfig<0,3,5>>,StyleFire<Red,White,0,3,FireConfig<0,2000,5>,FireConfig<3000,0,0>,FireConfig<0,5000,7>,FireConfig<0,3,5>>>,350>,White,400>,200,500>>(), "cyan"},
 
