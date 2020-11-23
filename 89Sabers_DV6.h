@@ -143,7 +143,7 @@ StylePtr<Layers<AudioFlicker<RotateColorsX<Variation,Red>,RotateColorsX<Variatio
     &style_charging,
     StyleNormalPtr<BLACK, BLACK, 300, 800>(), 
 	StyleNormalPtr<BLACK, BLACK, 300, 800>(),
-		StyleNormalPtr<BLACK, BLACK, 300, 800>(), "Battery\nLevel"}
+	StyleNormalPtr<BLACK, BLACK, 300, 800>(), "Battery\nLevel"}
 };
 BladeConfig blades[] = {
  { 0, WS281XBladePtr<125, bladePin, Color8::GRB, PowerPINS<bladePowerPin2, bladePowerPin3> >(),
