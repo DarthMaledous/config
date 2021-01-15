@@ -3,7 +3,7 @@
 #define NUM_BLADES 1
 #define NUM_BUTTONS 2
 #define VOLUME 2000
-const unsigned int maxLedsPerStrip = 144;
+const unsigned int maxLedsPerStrip = 280;
 #define CLASH_THRESHOLD_G 3.5
 #define ENABLE_AUDIO
 #define ENABLE_MOTION
@@ -15,7 +15,7 @@ const unsigned int maxLedsPerStrip = 144;
 #endif
 
 #ifdef CONFIG_PROP
-#include "../props/saber_sa22c_buttons.h"
+#include "../props/saber_fett264_buttons.h"
 #endif
 
 #ifdef CONFIG_PRESETS
@@ -45,7 +45,7 @@ StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<Red,Rgb<15
 
 };
 BladeConfig blades[] = {
- { 0, WS2811BladePtr<118, WS2811_ACTUALLY_800kHz | WS2811_GRB>(), CONFIGARRAY(presets) },
+ { 0, WS2811BladePtr<264, WS2811_ACTUALLY_800kHz | WS2811_GRB>(), CONFIGARRAY(presets) },
 };
 #endif
 

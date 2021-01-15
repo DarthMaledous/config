@@ -1,5 +1,5 @@
 #ifdef CONFIG_TOP
-#include "proffieboard_v1_config.h"
+#include "proffieboard_config.h"
 #define NUM_BLADES 1
 #define NUM_BUTTONS 2
 #define VOLUME 2600
@@ -9,12 +9,30 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_MOTION
 #define ENABLE_WS2811
 #define ENABLE_SD
+#define IDLE_OFF_TIME 90 * 1000
+#define SAVE_STATE
+#define NO_COLOR_SWING
 #endif
+
+#ifdef CONFIG_PROP
+#include "../props/saber_fett263_buttons.h"
+#endif
+
 
 #ifdef CONFIG_PRESETS
 Preset presets[] = {
 //SmoothSwing Font Section //   
-{ "TFA_Graflex", "tracks/Jedi_Steps.wav", StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<AudioFlicker<DeepSkyBlue,DodgerBlue>,Pulsing<Gradient<AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>>,Pulsing<Gradient<AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>>,Gradient<AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,80>,Rgb16<62191,64410,24155>>,Gradient<AudioFlicker<LightCyan,SteelBlue>,AudioFlicker<LightCyan,DodgerBlue>,DodgerBlue>,600>,200,450>>(),"Preset1"},
+{ "TFA_Graflex", "tracks/Jedi_Steps.wav",StylePtr<Layers<
+  Layers<
+    Layers<
+      Layers<
+        DeepSkyBlue,
+        AudioFlickerL<DodgerBlue>>,
+      LockupL<Pulsing<Gradient<AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>>,Pulsing<Gradient<AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>>,Gradient<AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>,AudioFlicker<DeepSkyBlue,DodgerBlue>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,AudioFlicker<DeepSkyBlue,DodgerBlue>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,
+      LocalizedClashL<White,80>,
+      BlastL<Rgb16<62191,64410,24155>>>,
+    OnSparkL<Gradient<AudioFlicker<LightCyan,SteelBlue>,AudioFlicker<LightCyan,DodgerBlue>,DodgerBlue>,Int<600>>>,
+  InOutHelperL<InOutFuncX<Int<200>,Int<450>>>>>(),"Preset1"},
    
 { "The_Return", "tracks/traya.wav",
 StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Pulsing<Gradient<Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>>,Pulsing<Gradient<Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>>,Gradient<Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,Gradient<DeepSkyBlue,AudioFlicker<SteelBlue,White>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>>,White>,White,400>,200,450>>(),"Preset2"},

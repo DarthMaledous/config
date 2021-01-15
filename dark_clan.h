@@ -10,17 +10,56 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define IDLE_OFF_TIME 90 * 1000
+#define FETT263_TWIST_ON_NO_BM
+#define FETT263_TWIST_ON_PREON
+#define FETT263_TWIST_OFF
 #define SAVE_STATE
 #define NO_COLOR_SWING
 #endif
 
 #ifdef CONFIG_PROP
-#include "../props/saber_sa22c_buttons.h"
+#include "../props/saber_fett263_buttons.h"
 #endif
 
 #ifdef CONFIG_PRESETS
 Preset presets[] = {
-{ "Vengeance", "tracks/swtor_darksidetheme1.wav",
+{"White", "tracks/",
+// 5 LED PCB
+StylePtr<Layers<
+  Layers<
+    Mix<Int<16384>,Rgb<25,25,25>,White>,
+    HumpFlickerL<Mix<Int<4096>,SteelBlue,White>,200>>,
+  BlastL<Yellow>,
+  LockupL<AudioFlicker<Blue,White>,AudioFlicker<Blue,White>,Int<32768>,SmoothStep<Int<28671>,Int<4096>>,LayerFunctions<Bump<Scale<SlowNoise<Int<20000>>,Int<3000>,Int<16000>>,Scale<BrownNoiseF<Int<10>>,Int<14000>,Int<8000>>>,Bump<Scale<SlowNoise<Int<2300>>,Int<26000>,Int<8000>>,Scale<NoisySoundLevel,Int<5000>,Int<10000>>>,Bump<Scale<SlowNoise<Int<2300>>,Int<20000>,Int<30000>>,Scale<IsLessThan<SlowNoise<Int<1500>>,Int<8000>>,Scale<NoisySoundLevel,Int<5000>,Int<0>>,Int<0>>>>>,
+  ResponsiveMeltL<Mix<TwistAngle<>,BrownNoiseFlicker<Red,Black,50>,Yellow>,TrInstant,TrInstant>,
+  ResponsiveBlastFadeL<Blinking<White,Yellow,300,650>,Int<12000>,Int<400>,Int<28000>,Int<8000>,EFFECT_CLASH>,
+  TransitionEffectL<TrConcat<TrFade<300>,Gradient<Black,White,Black>,TrFade<1200>>,EFFECT_IGNITION>,
+  InOutHelperL<InOutFuncX<Int<200>,Int<800>>,PulsingL<Gradient<Rgb<25,25,25>,HumpFlicker<SteelBlue,White,50>,Rgb<25,25,25>>,Int<3000>>>,
+  TransitionEffectL<TrConcat<TrWipe<50>,White,TrWipe<50>>,EFFECT_BLAST>,
+  TransitionEffectL<TrConcat<TrFade<2000>,AlphaL<HumpFlickerL<RotateColorsX<Variation,Rgb<95,0,210>>,10>,Bump<Int<0>,Int<4000>>>,TrFade<2950>,AlphaL<HumpFlickerL<RotateColorsX<Variation,Rgb<95,0,210>>,15>,Bump<Int<0>,Int<5000>>>,TrFade<3000>,AlphaL<HumpFlickerL<RotateColorsX<Variation,Rgb<95,0,210>>,20>,Bump<Int<0>,Int<6000>>>,TrBoing<1000,3>>,EFFECT_PREON>>>(),
+
+//MAIN BLADE
+StylePtr<Layers<
+  Layers<
+    Mix<Int<16384>,Rgb<25,25,25>,White>,
+    HumpFlickerL<Mix<Int<4096>,SteelBlue,White>,200>>,
+  BlastL<Yellow>,
+  LockupL<AudioFlicker<Blue,White>,AudioFlicker<Blue,White>,Int<32768>,SmoothStep<Int<28671>,Int<4096>>,LayerFunctions<Bump<Scale<SlowNoise<Int<20000>>,Int<3000>,Int<16000>>,Scale<BrownNoiseF<Int<10>>,Int<14000>,Int<8000>>>,Bump<Scale<SlowNoise<Int<2300>>,Int<26000>,Int<8000>>,Scale<NoisySoundLevel,Int<5000>,Int<10000>>>,Bump<Scale<SlowNoise<Int<2300>>,Int<20000>,Int<30000>>,Scale<IsLessThan<SlowNoise<Int<1500>>,Int<8000>>,Scale<NoisySoundLevel,Int<5000>,Int<0>>,Int<0>>>>>,
+  ResponsiveMeltL<Mix<TwistAngle<>,BrownNoiseFlicker<Red,Black,50>,Yellow>,TrInstant,TrInstant>,
+  ResponsiveBlastFadeL<Blinking<White,Yellow,300,650>,Int<12000>,Int<400>,Int<28000>,Int<8000>,EFFECT_CLASH>,
+  TransitionEffectL<TrConcat<TrFade<300>,Gradient<Black,White,Black>,TrFade<1200>>,EFFECT_IGNITION>,
+  InOutHelperL<InOutFuncX<Int<200>,Int<800>>>,
+  TransitionEffectL<TrConcat<TrWipe<50>,White,TrWipe<50>>,EFFECT_BLAST>,
+  TransitionEffectL<TrConcat<TrFade<2000>,AlphaL<HumpFlickerL<RotateColorsX<Variation,Rgb<95,0,210>>,10>,Bump<Int<0>,Int<4000>>>,TrFade<2950>,AlphaL<HumpFlickerL<RotateColorsX<Variation,Rgb<95,0,210>>,15>,Bump<Int<0>,Int<5000>>>,TrFade<3000>,AlphaL<HumpFlickerL<RotateColorsX<Variation,Rgb<95,0,210>>,20>,Bump<Int<0>,Int<6000>>>,TrBoing<1000,3>>,EFFECT_PREON>>>(),
+  
+//SWITCH LED's
+StylePtr<InOutHelper<Sequence<Red,Black,500,37,0b1010100011100,0b111000111000101,0b100000000000000>,1,1,Blinking<Red,Black,2000,200>>>(),
+StylePtr<InOutHelper<Sequence<Red,Black,200,37,0b111000111000101,0b100000000000000,0b111000111000101>,1,1,Blinking<Red,Black,4500,200>>>(), 
+StylePtr<IgnitionDelay<1000, InOutHelper<SimpleClash<Lockup<Blast<Yellow,Blinking<Yellow,Black,70,500>>,AudioFlicker<Blue,White>>,Blinking<Black,Yellow,150,500>>,300,800,Pulsing<Black,Yellow,5000>>>>(), "ATWHITE"},  
+/////////////////////////////////////////////////
+
+
+{ "Control", "tracks/swtor_darksidetheme1.wav",
 // 5 LED PCB
 StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Red,Pulsing<Gradient<Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red>,Pulsing<Gradient<Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red>,Gradient<Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,Yellow,90>,Green>,GhostWhite,850>,200,500,Pulsing<Black,Gradient<Pulsing<Red,Yellow,2000>,Pulsing<OrangeRed,PapayaWhip,800>,Pulsing<PapayaWhip,Orange,800>,Pulsing<Yellow,Red,2000>>,6500>>>(),
 
