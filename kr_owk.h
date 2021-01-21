@@ -22,7 +22,19 @@ const unsigned int maxLedsPerStrip = 144;
 #ifdef CONFIG_PRESETS
 Preset presets[] = {
 { "Peace", "tracks/sw_jedi_theme1.wav",
- StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<RandomFlicker<Blue,Rgb<20,45,255>>,Pulsing<Gradient<RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>>,Pulsing<Gradient<RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>>,Gradient<RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,100,70>,White>,White,400>,200,500>>(), "cyan"},
+StylePtr<Layers<
+  Layers<
+    Layers<
+      Layers<
+        Blue,
+        RandomL<Rgb<20,45,255>>>,
+      ResponsiveLockupL<Pulsing<Gradient<RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>>,Pulsing<Gradient<RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>>,Gradient<RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>,RandomFlicker<Blue,Rgb<20,45,255>>,Strobe<GhostWhite,BrownNoiseFlicker<Red,White,300>,50,1>,RandomFlicker<Blue,Rgb<20,45,255>>>,1500>,2000>,TrInstant,TrInstant,Int<26000>>,
+      ResponsiveClashL<NavajoWhite,TrInstant,TrFade<200>,Int<26000>>,
+      ResponsiveStabL<AudioFlicker<LightYellow,NavajoWhite>>,
+      ResponsiveBlastWaveL<White>,
+      TransitionEffectL<TrConcat<TrInstant,HumpFlicker<Cyan,LightYellow,50>,TrSmoothFade<800>>,EFFECT_FORCE>>,
+    OnSparkL<Gradient<Black,GhostWhite,Snow,Black>,Int<1400>>>,
+  InOutHelperL<InOutFuncX<Int<200>,Int<500>>>>>(), "cyan"},
 	
 	
  { "Corellian_CFX", "tracks/JFO5.wav",
