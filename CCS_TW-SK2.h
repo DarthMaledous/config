@@ -1,5 +1,5 @@
 #ifdef CONFIG_TOP
-#include "proffieboard_v1_config.h"
+#include "proffieboard_config.h"
 #define NUM_BLADES 3
 #define NUM_BUTTONS 2
 #define VOLUME 2500
@@ -10,7 +10,14 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define NO_COLOR_SWING
-#define SAVED_PRESET
+#define IDLE_OFF_TIME 90 * 1000
+#define SAVE_STATE
+#define FETT263_SWING_ON
+#define FETT263_TWIST_OFF
+#endif
+
+#ifdef CONFIG_PROP
+#include "../props/saber_fett263_buttons.h"
 #endif
 
 #ifdef CONFIG_PRESETS
@@ -47,10 +54,10 @@ const unsigned int maxLedsPerStrip = 144;
 Preset presets[] = {
 { "SK_DarkSith1", "tracks/SK1.wav",
 //ACCENT LEDs
-StylePtr<InOutHelper<Blast<LocalizedClash<Lockup<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,White,80>,White>,200,500,Cylon<Pulsing<Rgb16<14634,0,0>,Red,800>,5,10,Pulsing<Red,Rgb16<14634,0,0>,800>,5,20,1>>>(),
+StylePtr<Layers<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,LockupL<Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Pulsing<Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,Gradient<ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>,Strobe<White,BrownNoiseFlicker<Red,White,100>,50,1>,ColorCycle<Orange,0,30,Cylon<Red,10,10,Pulsing<Red,Yellow,800>,5,20,1>,100,1500,3500>>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,LocalizedClashL<White,80>,BlastL<White>,InOutHelperL<InOutFuncX<Int<200>,Int<500>>,Cylon<Pulsing<Rgb16<14634,0,0>,Red,800>,5,10,Pulsing<Red,Rgb16<14634,0,0>,800>,5,20,1>>>>(),
 
 //  CRYSTAL CHAMBER
-StylePtr<IgnitionDelay<250,InOutHelper<LocalizedClash<Lockup<Blast<RandomFlicker<Red,Rgb<85,0,0>>,White>,Red,AudioFlicker<OrangeRed,White>>,RandomFlicker<Red,Rgb<85,0,0>>,60,75>,180,800,Pulsing<Rgb<80,0,0>,Red,5800>>>>(),
+StylePtr<IgnitionDelayX<Int<250>,Layers<Layers<Red,RandomL<Rgb<85,0,0>>>,BlastL<White>,LockupL<Red,AudioFlicker<OrangeRed,White>>,LocalizedClashL<RandomFlicker<Red,Rgb<85,0,0>>,60,75>,InOutHelperL<InOutFuncX<Int<180>,Int<800>>,Pulsing<Rgb<80,0,0>,Red,5800>>>>>(),
 
 //MAIN BLADE
 StylePtr<IgnitionDelay<300,InOutHelper<LocalizedClash<Lockup<Blast<Red,White,200,100,400>,Pulsing<Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,Gradient<AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>,BrownNoiseFlicker<White,Strobe<SteelBlue,White,50,1>,100>,AudioFlicker<Red,Rgb<120,0,0>>,AudioFlicker<Red,Rgb<120,0,0>>>,3500>,AudioFlicker<OrangeRed,White>>,GreenYellow,60,75>,180,800,Black>>>(),"preset1" },
