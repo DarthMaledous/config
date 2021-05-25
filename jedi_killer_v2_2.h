@@ -13,6 +13,11 @@ const unsigned int maxLedsPerStrip = 144;
 #define NO_COLOR_SWING
 #endif
 
+#ifdef CONFIG_PROP
+#include "../props/saber_fett263_buttons.h"
+#endif
+
+
 #ifdef CONFIG_PRESETS
 Preset presets[] = {
 

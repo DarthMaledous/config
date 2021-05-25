@@ -10,6 +10,7 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define NO_COLOR_SWING
+#define ORIENTATION_ROTATION 0,20,0
 #define COLOR_CHANGE_DIRECT
 #define FETT263_SWING_ON_NO_BM
 #define FETT263_SWING_ON_PREON

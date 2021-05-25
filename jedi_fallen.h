@@ -12,8 +12,6 @@ const unsigned int maxLedsPerStrip = 144;
 #define NO_COLOR_SWING
 #define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
-//#define FETT263_SWING_ON_NO_BM
-//#define FETT263_SWING_ON_PREON
 #define FETT263_TWIST_ON
 #define FETT263_TWIST_OFF
 #endif

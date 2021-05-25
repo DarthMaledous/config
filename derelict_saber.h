@@ -1,5 +1,5 @@
 #ifdef CONFIG_TOP
-#include "proffieboard_v1_config.h"
+#include "proffieboard_config.h"
 #define NUM_BLADES 1
 #define NUM_BUTTONS 1
 #define VOLUME 2000
@@ -59,7 +59,7 @@ StylePtr<Layers<
   Mix<Int<12288>,Rgb<190,100,0>,Yellow>,
   AudioFlickerL<Rgb<140,150,0>>,
   ResponsiveLockupL<White,TrInstant,TrInstant,Int<26000>>,
-  ResponsiveLightningBlockL<White>,
+  ResponsiveLightningBlockL<BrownNoiseFlicker<Blue,Magenta,50>>,
   ResponsiveMeltL<Mix<TwistAngle<>,Red,Yellow>>,
   ResponsiveDragL<White>,
   ResponsiveClashL<White,TrInstant,TrFade<200>,Int<26000>>,
@@ -67,9 +67,11 @@ StylePtr<Layers<
   ResponsiveBlastWaveL<White>,
   ResponsiveBlastFadeL<Red>,
   ResponsiveStabL<White>,
-  InOutTrL<TrConcat<TrBoing<300,4>,NavajoWhite,TrSmoothFade<600>>,TrWipeIn<500>>>>(), "Korriban"},
+  TransitionEffectL<TrConcat<TrColorCycle<1000>,HumpFlicker<NavajoWhite,Red,50>,TrBoing<300,6>>,EFFECT_FORCE>,
+  TransitionEffectL<TrConcat<TrBoing<600,6>,NavajoWhite,TrSmoothFade<600>>,EFFECT_IGNITION>,
+  InOutTrL<TrConcat<TrWaveX<White,Int<200>,Int<100>,Int<600>>,NavajoWhite,TrInstant>,TrJoin<TrBoing<800,4>,TrWipeIn<500>>>>>(), "Korriban"},
 	
-	{"Legion", "tracks/",
+	{"IgnitionRedux", "tracks/",
 StylePtr<Layers<
   Black,
   Mix<Int<12288>,Red,RandomL<Red>>,
@@ -85,7 +87,7 @@ StylePtr<Layers<
   ResponsiveBlastFadeL<White>,
   ResponsiveStabL<White>,
   MultiTransitionEffectL<TrConcat<TrBoing<800,6>,BrownNoiseFlicker<Yellow,Black,50>,TrInstant>,EFFECT_IGNITION>,
-  InOutTrL<TrConcat<TrWaveX<Gradient<Black,Pulsing<GhostWhite,Black,800>,Black>>,White,TrSmoothFade<300>>,TrWipeInSparkTipX<White,Int<500>,Int<800>>>>>(), "Legion"},
+  InOutTrL<TrConcat<TrWaveX<Gradient<Black,Pulsing<GhostWhite,Black,800>,Black>>,White,TrSmoothFade<300>>,TrWipeInSparkTipX<White,Int<500>,Int<800>>>>>(), "IgintionRedux"},
 	 
 	
   { "Corellian", "tracks/venus.wav",
@@ -102,6 +104,23 @@ StylePtr<Layers<
   ResponsiveBlastFadeL<White>,
   ResponsiveStabL<White>,
   InOutTrL<TrConcat<TrWipeInSparkTipX<White,Int<200>>,HumpFlicker<OrangeRed,NavajoWhite,50>,TrSmoothFade<500>>,TrWipeIn<500>>>>(),"Corellian"},
+
+	{ "Legion", "tracks/",
+StylePtr<Layers<
+  RotateColorsX<Sin<Int<10>,Int<4096>,Int<256>>,Gradient<OrangeRed,Red>>,
+  ResponsiveLightningBlockL<White>,
+  ResponsiveMeltL<Mix<TwistAngle<>,Red,Yellow>>,
+  ResponsiveDragL<White>,
+  ResponsiveClashL<White,TrInstant,TrFade<200>,Int<26000>>,
+  ResponsiveBlastL<White>,
+  ResponsiveBlastWaveL<White>,
+  ResponsiveBlastFadeL<White>,
+  TransitionEffectL<TrConcat<TrFade<300>,Gradient<Black,NavajoWhite,Black>,TrBoing<300,2>>,EFFECT_IGNITION>,
+  ResponsiveStabL<White>,
+  InOutTrL<TrWipe<250>,TrWipeIn<500>>>>(), "Legion"},
+
+	{"ProdButcher", "tracks/",
+StylePtr<Layers<RandomFlicker<RotateColorsX<Variation,Rgb<95,0,255>>,RotateColorsX<Variation,Rgb<135,0,255>>>,LockupTrL<Layers<AlphaL<AudioFlickerL<Rgb<255,225,0>>,Bump<Scale<BladeAngle<>,Scale<BladeAngle<0,16000>,Int<4000>,Int<26000>>,Int<6000>>,Scale<SwingSpeed<100>,Int<14000>,Int<18000>>>>,AlphaL<NavajoWhite,Bump<Scale<BladeAngle<>,Scale<BladeAngle<0,16000>,Int<4000>,Int<26000>>,Int<6000>>,Int<10000>>>>,TrConcat<TrInstant,TransitionEffect<Rgb<255,225,0>,NavajoWhite,TrInstant,TrFade<200>,EFFECT_LOCKUP_BEGIN>,TrFade<400>>,TrConcat<TrInstant,AlphaL<Mix<SmoothStep<Scale<BladeAngle<>,Scale<BladeAngle<0,16000>,Int<4000>,Int<26000>>,Int<6000>>,Int<1000>>,Stripes<1500,2000,TransitionEffect<NavajoWhite,Rgb<255,225,0>,TrInstant,TrFade<200>,EFFECT_LOCKUP_BEGIN>,Red>,Stripes<1500,-2500,TransitionEffect<NavajoWhite,Rgb<255,225,0>,TrInstant,TrFade<200>,EFFECT_LOCKUP_BEGIN>,Red>>,Int<18000>>,TrFade<400>>,SaberBase::LOCKUP_NORMAL>,ResponsiveLightningBlockL<Strobe<White,AudioFlicker<White,Blue>,50,1>,TrConcat<TrInstant,AlphaL<White,Bump<Int<12000>,Int<18000>>>,TrFade<200>>,TrConcat<TrInstant,HumpFlickerL<AlphaL<White,Int<16000>>,30>,TrSmoothFade<600>>>,ResponsiveStabL<Orange>,ResponsiveBlastWaveL<TransitionEffect<Rgb<255,225,0>,NavajoWhite,TrInstant,TrFade<50>,EFFECT_BLAST>,Int<400>,Scale<SwingSpeed<200>,Int<100>,Int<400>>>,ResponsiveClashL<TransitionEffect<Rgb<255,225,0>,NavajoWhite,TrInstant,TrFade<100>,EFFECT_CLASH>,TrInstant,TrFade<400>,Scale<BladeAngle<0,16000>,Int<4000>,Int<26000>>,Int<6000>,Int<20000>>,TransitionEffectL<TrConcat<TrInstant,AudioFlickerL<RotateColorsX<Variation,Rgb<255,150,150>>>,TrFade<1200>>,EFFECT_IGNITION>,LockupTrL<AlphaL<BrownNoiseFlickerL<White,Int<300>>,SmoothStep<Int<30000>,Int<5000>>>,TrWipeIn<400>,TrFade<300>,SaberBase::LOCKUP_DRAG>,LockupTrL<AlphaL<Mix<TwistAngle<>,Rgb<255,200,0>,DarkOrange>,SmoothStep<Int<28000>,Int<5000>>>,TrWipeIn<600>,TrFade<300>,SaberBase::LOCKUP_MELT>,InOutTrL<TrWipeX<Scale<BladeAngle<>,Int<500>,Int<200>>>,TrWipeInX<Scale<BladeAngle<>,Int<800>,Int<300>>>>,TransitionEffectL<TrConcat<TrBoing<3000,5>,AlphaL<BrownNoiseFlickerL<RotateColorsX<Variation,Red>,Int<100>>,Bump<Int<0>,Int<4000>>>,TrBoing<3000,3>,Black,TrBoing<1400,3>,AlphaL<BrownNoiseFlickerL<RotateColorsX<Variation,Red>,Int<200>>,Bump<Int<0>,Int<6000>>>,TrBoing<550,3>>,EFFECT_PREON>>>(), "Prodigal Butcher"},
  
    { "Calibrate", "tracks/mars.wav",
     &style_charging, "Battery\nLevel"}

@@ -59,7 +59,7 @@ StylePtr<IgnitionDelay<1000, InOutHelper<SimpleClash<Lockup<Blast<Yellow,Blinkin
 /////////////////////////////////////////////////
 
 
-{ "Control", "tracks/swtor_darksidetheme1.wav",
+{ "DarkJedi", "tracks/swtor_darksidetheme1.wav",
 // 5 LED PCB
 StylePtr<InOutHelper<OnSpark<Blast<LocalizedClash<Lockup<Red,Pulsing<Gradient<Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red>,Pulsing<Gradient<Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red>,Gradient<Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red,Red,Strobe<White,BrownNoiseFlicker<Orange,White,100>,50,1>,Red>,1500>,2000>,RandomPerLEDFlicker<Red,White>>,Yellow,90>,Green>,GhostWhite,850>,200,500,Pulsing<Black,Gradient<Pulsing<Red,Yellow,2000>,Pulsing<OrangeRed,PapayaWhip,800>,Pulsing<PapayaWhip,Orange,800>,Pulsing<Yellow,Red,2000>>,6500>>>(),
 
