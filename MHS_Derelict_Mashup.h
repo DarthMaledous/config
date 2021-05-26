@@ -1,6 +1,6 @@
 #ifdef CONFIG_TOP
 #include "proffieboard_config.h"
-#define NUM_BLADES 2
+#define NUM_BLADES 3
 #define NUM_BUTTONS 2
 #define VOLUME 2200
 const unsigned int maxLedsPerStrip = 144;
@@ -52,14 +52,12 @@ Preset presets[] = {
     &style_charging, "Battery\nLevel"}
 };
 BladeConfig blades[] = {
- { 0, 
-  SubBlade(0, 1, WS2811BladePtr<138, WS2811_ACTUALLY_800kHz | WS2811_GRB>()),
-  SubBlade(2, 5, NULL),
-  SubBlade(4, 5, NULL),
-  SubBlade(6, 7, NULL),
-  
-  SubBlade(5, 137, NULL),
-  CONFIGARRAY(presets) },
+ { 0,
+   WS2811BladePtr<122, WS2811_ACTUALLY_800kHz | WS2811_GRB>(),
+   SubBladeWithStride(0, 14, 2 WS2811BladePtr<16, WS2811_ACTUALLY_800kHz>()),
+   SubBladeWithStride(1, 15, 2, NULL),
+   CONFIGARRAY(presets) },
+
 };
 #endif
 
