@@ -12,17 +12,20 @@ const unsigned int maxLedsPerStrip = 144;
 #define NO_COLOR_SWING
 #define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
+#define BC_SWING_ON
+#define BC_TWIST_OFF
 #endif
 
 #ifdef CONFIG_PROP
-#include "../props/saber_sa22c_buttons.h"
+#include "../props/saber_BC_buttons.h"
+//#include "../props/saber_sa22c_buttons.h"
 //#include "../props/saber_fett263_buttons.h"
 #endif
 
 
 #ifdef CONFIG_PRESETS
 Preset presets[] = {
-   { "SK_The_Dark", "tracks/venus.wav",
+   { "SK_The_Dark", "tracks/SK2.wav",
 StylePtr<Layers<
   RandomFlicker<DeepSkyBlue,DodgerBlue>,
   ResponsiveLockupL<White,TrInstant,TrInstant,Int<26000>>,
@@ -41,7 +44,7 @@ StylePtr<Layers<
   InOutTrL<TrWipe<200>,TrWipeIn<500>>>>(), "Preset 1"},
 
 
-   { "Peace", "tracks/mars.wav",
+   { "Peace", "tracks/SK3.wav",
  StylePtr<Layers<
   RandomFlicker<DeepSkyBlue,DodgerBlue>,
   ResponsiveLockupL<White,TrInstant,TrInstant,Int<26000>>,
@@ -58,7 +61,7 @@ StylePtr<Layers<
   TransitionEffectL<TrConcat<TrInstant,Gradient<Black,HumpFlicker<Snow,LightYellow,50>,AudioFlicker<DeepSkyBlue,SteelBlue>>,TrSmoothFade<1800>>,EFFECT_IGNITION>,
   InOutTrL<TrWipe<200>,TrWipeIn<500>>>>(), "blue"},
 
-   { "Nextor", "tracks/mercury.wav",
+   { "Nextor", "tracks/SK4.wav",
   StylePtr<Layers<
   Blue,
   AudioFlickerL<DodgerBlue>,
