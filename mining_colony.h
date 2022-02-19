@@ -39,9 +39,31 @@ StylePtr<Layers<AudioFlicker<Rgb<100,175,50>,Cyan>,ResponsiveLockupL<Pulsing<Bro
 	
 	{"FallenOrder", "tracks/",
 StylePtr<Layers<RandomFlicker<RotateColorsX<ChangeSlowly<Scale<Sin<Int<18>>,Int<0>,Int<4000>>,Int<50000>>,GreenYellow>,Rgb<100,175,50>>,ResponsiveLockupL<Pulsing<BrownNoiseFlicker<LightYellow,NavajoWhite,50>,Blinking<Snow,Ivory,300,500>,1200>,TrInstant,TrInstant,Int<26000>>,ResponsiveLightningBlockL<BrownNoiseFlicker<Blue,Magenta,50>,TrWipeInSparkTip<Magenta,300,1600>,TrWaveX<White>>,ResponsiveMeltL<Mix<TwistAngle<>,Red,Yellow>>,ResponsiveDragL<White>,ResponsiveClashL<Coral,TrInstant,TrFade<200>,Int<26000>>,ResponsiveBlastL<White>,ResponsiveBlastWaveL<DarkOrange>,ResponsiveBlastFadeL<White>,ResponsiveStabL<White>,TransitionEffectL<TrConcat<TrSmoothFade<600>,White,TrSmoothFade<650>>,EFFECT_IGNITION>,TransitionEffectL<TrConcat<TrWaveX<BrownNoiseFlicker<Black,Cyan,50>,Int<350>>,AlphaL<Cyan,Sin<Int<100>>>,TrSmoothFade<650>>,EFFECT_FORCE>,InOutTrL<TrWipe<300>,TrWipeIn<500>>>>(), "Preset 5"},
+
+	{"Dangerous", "tracks/",
+StylePtr<Layers<
+  DodgerBlue,
+  AlphaL<Blue,Int<16000>>,
+  RandomL<DeepSkyBlue>,
+  AlphaL<AliceBlue,Bump<Int<0>,Int<32000>>>,
+  TransitionEffectL<TrConcat<TrSmoothFade<300>,Stripes<10000,-1000,Azure,SteelBlue,NavajoWhite,Orange>,TrFade<650>>,EFFECT_FORCE>,
+  ResponsiveLockupL<White,TrInstant,TrInstant,Int<26000>>,
+  LockupTrL<Pulsing<BrownNoiseFlicker<SteelBlue,Magenta,50>,SteelBlue,2000>,TrWipeInSparkTip<White,250,200>,TrSmoothFade<300>,SaberBase::LOCKUP_LIGHTNING_BLOCK>,
+  ResponsiveLightningBlockL<BrownNoiseFlicker<Azure,Magenta,50>>,
+  ResponsiveMeltL<Mix<TwistAngle<>,Red,Yellow>>,
+  ResponsiveDragL<White>,
+  ResponsiveBlastFadeL<Rgb<200,80,30>,Int<12000>,Int<400>,Int<28000>,Int<8000>,EFFECT_CLASH>,
+  ResponsiveBlastWaveL<BlanchedAlmond,Int<400>,Int<100>,Int<400>,Int<28000>,Int<8000>,EFFECT_CLASH>,
+  ResponsiveBlastL<White>,
+  ResponsiveBlastWaveL<White>,
+  ResponsiveBlastFadeL<White>,
+  ResponsiveStabL<White>,
+  TransitionEffectL<TrConcat<TrInstant,Stripes<5000,1000,AliceBlue,DodgerBlue,Azure,Blue>,TrFade<800>>,EFFECT_IGNITION>,
+  TransitionEffectL<TrConcat<TrSmoothFade<300>,AlphaL<Azure,Bump<Int<32768>,Int<26384>>>,TrSmoothFade<800>>,EFFECT_IGNITION>,
+  TransitionEffectL<TrConcat<TrInstant,Stripes<5000,-1000,AliceBlue,DodgerBlue,Azure,Blue>,TrFade<800>>,EFFECT_RETRACTION>,
+  InOutTrL<TrWipe<300>,TrWipeIn<650>>>>(), "Preset 6"},
 	
- 
-   { "SmthJedi", "tracks/mars.wav",
+   { "Calibrate", "tracks/mars.wav",
     &style_charging, "Battery\nLevel"}
 };
 BladeConfig blades[] = {
