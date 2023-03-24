@@ -64,7 +64,11 @@ StylePtr<Layers<Sequence<Red,Black,150,37,0b1010100011100,0b111000111000101,0b10
 StylePtr<Layers<Sequence<Rgb<120,0,255>,Black,200,37,0b101000001011,0b111000111010,0b100100011111000>,InOutTrL<TrSmoothFade<300>,TrInstant,Sequence<Rgb<120,0,255>,Black,200,37,0b1010100001010,0b111000111000101,0b100000000000000>>>>(), "Executioner"},
 	
 
+<<<<<<< HEAD
 { "Calibrate", "tracks/mars.wav",
+=======
+{ "Calibrate", "tracks/battery_charge.wav",
+>>>>>>> 7958419 (Initial config commit for v6.8)
  &style_charging, 
  StylePtr<Layers<Blinking<Rgb<120,0,255>,Black,400,500>,InOutTrL<TrSmoothFade<300>,TrInstant,Sequence<Rgb<120,0,255>,Black,150,37,0b1010100001010,0b111000111000101,0b100000000000000>>>>(),
  StylePtr<Layers<Blinking<Red,Black,400,500>,InOutTrL<TrSmoothFade<300>,TrInstant,Sequence<Red,Black,150,37,0b1010100001010,0b111000111000101,0b100000000000000>>>>(), "Battery\nLevel"}
