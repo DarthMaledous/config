@@ -10,10 +10,25 @@ const unsigned int maxLedsPerStrip = 144;
 #define ENABLE_WS2811
 #define ENABLE_SD
 #define NO_COLOR_SWING
-#define IDLE_OFF_TIME 90 * 1000
 #define SAVE_STATE
-#define SA22C_TWIST_ON
-#define SA22C_TWIST_OFF
+#define IDLE_OFF_TIME 60 * 5 * 1000
+#define MOTION_TIMEOUT 60 * 15 * 1000
+#define DISABLE_BASIC_PARSER_STYLES
+#define FETT263_EDIT_MODE_MENU
+#define ENABLE_ALL_EDIT_OPTIONS
+#define KEEP_SAVEFILES_WHEN_PROGRAMMING
+#define FETT263_DUAL_MODE_SOUND
+#define FETT263_CLASH_STRENGTH_SOUND
+#define FETT263_SAY_BATTERY_PERCENT
+#define FETT263_SAY_COLOR_LIST
+#define FETT263_SAY_COLOR_LIST_CC
+#define FETT263_TWIST_ON_PREON
+#define FETT263_TWIST_ON_NO_BM
+#define FETT263_TWIST_OFF
+#endif
+
+#ifdef CONFIG_PROP
+#include "../props/saber_fett263_buttons.h"
 #endif
 
 
