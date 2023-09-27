@@ -4,7 +4,11 @@
 #define NUM_BUTTONS 2
 #define VOLUME 2200
 const unsigned int maxLedsPerStrip = 144;
+<<<<<<< HEAD
 #define CLASH_THRESHOLD_G 3.5
+=======
+#define CLASH_THRESHOLD_G 2.5
+>>>>>>> 7958419 (Initial config commit for v6.8)
 #define ENABLE_AUDIO
 #define ENABLE_MOTION
 #define ENABLE_WS2811
